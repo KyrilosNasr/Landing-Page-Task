@@ -1,0 +1,146 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Alexandria", sans-serif;
+    position: relative;
+}
+
+/* fields Start */
+span.fields {
+    position: relative;
+    display: flex;
+}
+
+
+span.fields::before {
+    position: absolute;
+    content: url('./images/star.svg');
+    top: -49px;
+    left: -60px;
+}
+
+.fields::after {
+    position: absolute;
+    content: url('./images/vector.svg');
+    top: -27px;
+    right: 7px;
+}
+
+/* fields End*/
+
+.hover\:shadow-2xl:hover {
+    --tw-shadow: 0 25px 78px -12px rgb(0 0 0 / 0.15);
+    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+/* features Start */
+.features-card:hover img {
+    background-color: white;
+}
+
+/* features End */
+
+/* pricing Start */
+.price {
+    background-image: url('./images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* pricing End */
+
+
+/*  testimonial Start  */
+.desc::before {
+    content: url('./images/up.svg');
+    position: absolute;
+    top: 14px;
+    left: 90px;
+}
+
+.desc::after {
+    content: url('./images/down.svg');
+    position: absolute;
+    bottom: 240px;
+    right: 90px;
+}
+
+/*  testimonial End  */
+
+/*  cases study Start  */
+.card-1 {
+    background-image: url('./images/post1.png') !important;
+}
+
+.card-2 {
+    background-image: url('./images/post2.png') !important;
+}
+
+.card-3 {
+    background-image: url('./images/post3.png') !important;
+}
+
+/*  cases study End  */
+
+/*  faq Start  */
+.faq {
+    position: relative;
+}
+
+.faq::before {
+    position: absolute;
+    content: url('./images/faq1.svg');
+    top: 0;
+    left: 0;
+}
+
+.faq::after {
+    position: absolute;
+    content: url('./images//faq2.svg');
+    bottom: 0;
+    right: 0;
+}
+
+/*  faq End  */
+
+/*  ready Start  */
+
+.ready {
+    position: relative;
+}
+
+.ready::before {
+    content: url('./images/arrow.svg');
+    position: absolute;
+    top: 25px;
+    left: -70px;
+}
+
+.ipad {
+    position: relative;
+    height: 600px;
+}
+
+.ipad::before {
+    position: absolute;
+    content: url('./images/vector.svg');
+    bottom: 231px;
+    left: -39px;
+    transform: rotateZ(-88deg);
+}
+
+.ipad::after {
+    position: absolute;
+    content: url('./images/star-y.svg');
+    bottom: 249px;
+    right: -45px;
+
+}
+
+.ipad img{
+    position: relative;
+    bottom: -342px;
+    left: 0;
+}
+/*  ready End  */

@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+  <!-- tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            main: "#4ABB82",
+          },
+        },
+      },
+    };
+  </script>
+  <!-- alexandria font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main w-full max-w-full bg-white mx-auto">
+    <!-- Nav Start -->
+    <nav class="flex items-center justify-around flex-wrap p-5 h-[82px] fixed top-0 max-w-full w-full bg-white z-50">
+      <div class="w-full block lg:flex lg:items-center lg:w-auto hidden md:items-center">
+        <div class="flex items-center flex-shrink-0 mr-6">
+          <img src="./images/logo.png" class="w-[106px]" alt="" />
+        </div>
+        <div class="flex flex-col lg:flex-row justify-between items-center w-100">
+          <div class="mb-2 lg:mb-0 mr-6">
+            <a href="#" class="hover:text-teal-700 text-base font-medium">Services</a>
+          </div>
+          <div class="mb-2 lg:mb-0 mr-6">
+            <a href="#" class="hover:text-teal-700 text-base font-medium">Pricing</a>
+          </div>
+          <div class="mb-2 lg:mb-0 mr-6">
+            <a href="#" class="hover:text-teal-700 text-base font-medium">Blog</a>
+          </div>
+          <div class="mb-2 lg:mb-0 mr-6">
+            <a href="#" class="hover:text-teal-700 text-base font-medium">Case Study</a>
+          </div>
+          <div>
+            <a href="#" class="hover:text-teal-700 text-base font-medium">Partners</a>
+          </div>
+        </div>
+      </div>
+      <div class="lg:flex justify-between items-center hidden">
+        <div>
+          <a href="#"
+            class="hover:text-teal-700 flex items-center mr-6 py-2 border border-transparent rounded-md font-medium text-xs ml-4 md:ml-0">En
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="5" viewBox="0 0 11 5" fill="none" class="ml-2">
+              <g clip-path="url(#clip0_1_933)">
+                <path
+                  d="M2.06929 0C1.33806 0 0.990084 0.900076 1.53115 1.39195L4.96186 4.51078C5.267 4.78818 5.733 4.78818 6.03814 4.51078L9.46885 1.39195C10.0099 0.900077 9.66194 0 8.93071 0H2.06929Z"
+                  fill="#1D1D35" />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_933">
+                  <rect width="11" height="5" fill="white" />
+                </clipPath>
+              </defs>
+            </svg></a>
+        </div>
+        <div class="flex items-center justify-between">
+          <button class="mr-6 py-2 px-4 hover:text-white hover:bg-main border border-[#D5DAE1] font-bold rounded-full">
+            Partners Login
+          </button>
+          <button class="mr-6 bg-main py-2 px-4 text-white border border-[#D5DAE1] font-bold rounded-full">
+            Book a Demo
+          </button>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between lg:hidden w-3/4">
+        <div class="flex items-center flex-shrink-0 mr-6">
+          <img src="./images/logo.png" class="w-[106px]" alt="" />
+        </div>
+        <div class="flex items-center">
+          <div class="flex justify-around items-center">
+            <a href="#"
+              class="hover:text-teal-700 inline-flex items-center pr-1 py-2 border border-transparent rounded-md font-medium text-sm font-medium ml-4 md:ml-0">En
+            </a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5" fill="none">
+              <g clip-path="url(#clip0_124_33)">
+                <path
+                  d="M1.74283 0.636719C1.12476 0.636719 0.830641 1.39751 1.28797 1.81326L4.18778 4.44945C4.44569 4.68392 4.83958 4.68392 5.0975 4.44945L7.9973 1.81326C8.45463 1.3975 8.1605 0.636719 7.54244 0.636719H1.74283Z"
+                  fill="#1D1D35" />
+              </g>
+              <defs>
+                <clipPath id="clip0_124_33">
+                  <rect width="9.29772" height="4.22624" fill="white" transform="translate(-0.00598145 0.640625)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <button id="menu-btn" class="focus:outline-none focus:ring focus:ring-white focus:ring-opacity-50 p-4 block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+              <path d="M3.97559 12.5039H21.9756M3.97559 6.50391H21.9756M3.97559 18.5039H21.9756" stroke="#1D1D35"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Nav End -->
+    <div class="fixed bottom-4 right-4 z-50">
+      <button class="font-bold py-2 px-4 rounded-full">
+      <img src="./images/float button.svg" alt="">
+    </button>
+  </div>
+    <!-- header-section start -->
+    <div class="lg:container w-full mx-auto mt-[100px] flex items-center justify-center">
+      <div class="w-full items-center flex flex-col">
+        <div
+          class="w-[139px] h-[22px] px-2 py-1 bg-main rounded-[36px] shadow justify-center items-center gap-0.5 inline-flex text-center mb-[24px]">
+          <img src="./images/sparkle.svg" alt="" />
+          <div class="text-white text-xs py-1 font-medium leading-[18px]">
+            Queue Soluation
+          </div>
+        </div>
+        <div
+          class="lg:w-[1007px] w-[342.98px] mt-[20px] lg:mt-0 text-center text-gray-800 lg:text-[56px] text-3xl lg:font-bold font-semibold lg:leading-[71px] leading-[38px]">
+          Be online with a dedicated website <br />
+          to represent your brand
+        </div>
+        <div
+          class="lg:w-[715px] w-[342.98px] lg:mt-0 mt-[20px] text-center text-slate-700 lg:text-xl text-base font-light leading-normal lg:leading-[30px">
+          Start working with Queue that can provide everything you need to
+          generate sales, drive traffic, connect with your loyal customers.
+        </div>
+        <div class="w-[377px] h-[50px] mt-[32px] flex items-center md:flex-row flex-col justify-between gap-3">
+          <div
+            class="w-[182px] h-[50px] px-[30px] py-2 bg-main rounded-[100px] justify-center items-center gap-2 inline-flex">
+            <div class="text-white text-lg font-medium leading-7">
+              Book a Demo
+            </div>
+          </div>
+
+          <div
+            class="h-[50px] px-7 py-2 bg-white rounded-[100px] border border-gray-300 justify-center items-center gap-2 inline-flex">
+            <div class="text-gray-800 text-lg font-medium  leading-7">Contact Sales</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- header-section end -->
+    <img src="./images/header.jpg" class="w-screen h-[648px]" alt="" />
+
+    <!-- partners section Start -->
+    <div class="bg-emerald-50 w-full">
+      <div class="container text-center flex flex-col items-center gap-3 justify-between mx-auto">
+        <h2 class="w-[168px] h-[31px] text-center text-gray-800 text-3xl font-semibold mt-[100px]">
+          Trusted by
+        </h2>
+        <div class="text-center text-slate-400 text-xl font-light">
+          They are not our clients, but partners in success
+        </div>
+        <div class="flex items-center justify-between lg:gap-6 flex-wrap flex-row w-full">
+          <div class="flex lg:flex-row flex-col items-center justify-around lg:w-full w-fit">
+            <img src="./images/amazon.svg" class="w-fit h-[38px]" alt="" />
+            <img src="./images/slack.svg" class="w-fit" alt="" />
+            <img src="./images/Union.svg" class="w-fit" alt="" />
+            <img src="images/image 51.svg" class="w-fit" alt="" />
+            <img src="./images/image 53.svg" class="w-fit" alt="" />
+          </div>
+          <div class="flex lg:flex-row flex-col items-center justify-around lg:w-full w-fit">
+            <img src="./images/Company logo.svg" class="w-fit" alt="" />
+            <img src="./images/Company logo (1).svg" class="w-fit" alt="" />
+            <img src="./images/Company logo (2).svg" class="w-fit" alt="" />
+            <img src="./images/Company logo (3).svg" class="w-fit" alt="" />
+            <img src="./images/Company logo (4).svg" class="w-fit" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- partners section End -->
+
+    <!-- Services Start -->
+    <div class="container mx-auto relative">
+      <div class="w-full items-center flex flex-col">
+        <div class="w-fit h-[22px] px-4 py-4 mt-[100px] bg-main rounded-[36px] shadow justify-around items-center gap-0.5 inline-flex text-center">
+          <img class="py-1 mr-2" src="./images/services.svg" alt="" />
+          <div class="text-white text-base font-medium py-1 leading-[18px]">
+            Services
+          </div>
+        </div>
+        <div class="lg:w-[944px] text-center mt-6 text-gray-800 text-5xl font-semibold leading-[60px]">Track your business
+          in a new way</div>
+        <div class="text-center text-slate-600 text-xl font-light leading-[30px]">Here are some services that help your
+          business with Queue Soluation.</div>
+
+        <div
+          class="w-[1143.26px] mx-auto h-[82px] p-2.5 bg-slate-100 rounded-[100px] hidden justify-start items-start lg:gap-[45px] gap-3 flex-col lg:flex flex-wrap mt-[66px]">
+          <div class="px-[65px] py-3 bg-white rounded-[87.05px] shadow justify-start items-center gap-[10.32px] flex">
+            <div class="w-6 h-6 ">
+              <div class="w-5 h-[18px] left-0 top-0">
+                <img src="./images/sales_active.svg" alt="sales">
+              </div>
+            </div>
+            <div class="text-gray-800 text-[20.89px] font-normal leading-[37.82px] tracking-tight">Sales</div>
+          </div>
+          <div
+            class="px-[65px] py-3 rounded-[87.05px] hover:bg-white shadow justify-start items-center gap-[10.32px] flex">
+            <div class="w-6 h-6 mt-1">
+              <div class="w-5 h-5 left-0 top-0">
+                <img src="./images/Manage_inactive.svg" alt="">
+              </div>
+            </div>
+            <div class="text-slate-500 text-[20.89px] font-normal leading-[37.82px] tracking-tight">Manage</div>
+          </div>
+          <div
+            class="px-[65px] py-3 rounded-[87.05px] hover:bg-white shadow justify-start items-center gap-[10.32px] flex">
+            <div class="w-6 h-6 mt-2">
+              <div class="w-[18px] h-5 left-[3px] top-[2px]">
+                <div class="w-[18px] h-5 left-0 top-0">
+                  <img src="./images//reports_inactive.svg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="text-slate-500 text-[20.89px] font-normal leading-[37.82px] tracking-tight">Reports</div>
+          </div>
+          <div
+            class="px-[65px] py-3 rounded-[87.05px] hover:bg-white shadow justify-start items-center gap-[10.32px] flex">
+            <div class="w-6 h-6 mt-1">
+              <div class="w-[18.52px] h-5 left-[2.71px] top-[1.98px]">
+                <div class="w-[18.52px] h-[15.41px] left-0 top-0">
+                  <img src="./images/Marketing_inactive.svg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="text-slate-500 text-[20.89px] font-normal leading-[37.82px] tracking-tight">Marketing</div>
+          </div>
+        </div>
+
+        <div class="w-full h-[38px] relative">
+          <div class="w-[84.37px] h-[38px] px-2 py-1 left-0 top-0 absolute bg-white justify-start items-center gap-[7.93px] inline-flex">
+              <div class="w-[18.44px] h-[18.44px] relative">
+                  <div class="w-[15.37px] h-[13.83px] left-[1.54px] top-[2.30px] absolute">
+                      <div class="w-[15.37px] h-[13.83px] left-0 top-0 absolute">
+                      </div>
+                  </div>
+              </div>
+              <div class="text-gray-800 text-base font-normal font-['Alexandria'] leading-[29.06px] tracking-tight">Sales</div>
+          </div>
+          <div class="w-[66px] h-[27px] left-[276.98px] top-[5.50px] absolute">
+              <div class="w-[27px] h-[27px] p-[6.75px] left-[66px] top-0 absolute origin-top-left rotate-180 bg-green-400 rounded-[28.13px] border justify-center items-center gap-[4.50px] inline-flex">
+                  <div class="w-[13.50px] h-[13.50px] p-[2.25px] justify-center items-center flex"></div>
+              </div>
+              <div class="w-[27px] h-[27px] p-[6.75px] left-[27px] top-0 absolute origin-top-left rotate-180 bg-gray-100 bg-opacity-80 rounded-[28.13px] justify-center items-center gap-[4.50px] inline-flex">
+                  <div class="w-[13.50px] h-[13.50px] relative"></div>
+              </div>
+          </div>
+      </div>
+        <div class="lg:w-[1155.85px] h-[465.84px] mt-[65px] gap-3 flex lg:flex-row flex-col-reverse justify-between">
+          <div class="lg:w-[487.19px] h-[465.84px] flex items-start justify-between flex-col">
+
+            <div class="w-[483.78px] left-[3px]  text-gray-800 text-[42px] font-bold leading-[50.40px]">Custmoize
+              responsive website for ordering.</div>
+            <div
+              class="w-[486.19px] h-[123.84px] left-[1px] top-[124px]  text-slate-600 text-xl font-light leading-[30px]">
+              Launch a website that is suitable for all devices, which allows your customers to browse and purchase your
+              products using different and diverse payment methods.<br /></div>
+            <div class="lg:w-[468px] w-full h-[114px]">
+              <div class="w-[221px] h-[30px] flex items-center">
+                <img src="./images/chevron-right-double.svg" alt="">
+                <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">Responsive website.</div>
+              </div>
+              <div class="w-[404px] h-[30px] flex items-center">
+                <img src="./images/chevron-right-double.svg" alt="">
+                <div class="left-[26px] text-slate-700 text-xl font-light leading-[30px]">New, trending, and adjustable
+                  website.</div>
+
+              </div>
+              <div class="w-[468px] h-[30px] flex items-center">
+                <img src="./images/chevron-right-double.svg" alt="">
+                <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">comfortable and easy
+                  purchasing experience.</div>
+
+              </div>
+            </div>
+            <div class="w-[128.54px] h-14 py-4 rounded-[100px] justify-center items-center gap-px inline-flex">
+              <div class="w-[103.54px] text-center text-green-400 text-lg font-medium underline leading-normal">Learn
+                More</div>
+              <div class="w-6 h-6"></div>
+            </div>
+          </div>
+          <img class="w-[569.15px] h-[445.66px] rounded-[10px]" src="./images/pic.png" />
+        </div>
+      </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- fields Start -->
+    <div class="container mx-auto mt-[31px]">
+      <div class="flex items-center flex-col w-full">
+        <div class="w-full h-auto flex items-center justify-center">
+          <div class="w-[613px] h-[124.50px] mt-[120px]">
+            <span class="fields"></span>
+            <div
+              class="w-[561.07px] h-12 left-[25.96px] top-0 text-center text-gray-800 text-4xl font-semibold leading-[60px">
+              Queue is bulid for many fields.</div>
+            <div class="w-[613px] left-0 top-[64.50px] text-center text-slate-600 text-xl font-light leading-[30px]">
+              Whatever your field of trade, you can count on Queue and its support for various sectors.</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between w-full mt-[72px]">
+          <div class="flex items-start flex-col h-full gap-4">
+            <div
+              class="w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
+              <img src="./images/caffe.svg" alt="">
+              <div class="h-[90px]">
+                <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Cafe Shop</div>
+                <div class="w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything you
+                  need to run your business digitally.</div>
+              </div>
+            </div>
+            <div
+              class="w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
+              <img src="./images/shop.svg" alt="">
+              <div class="h-[90px]">
+                <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Super Markets
+                </div>
+                <div class="w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Many advantages
+                  to suit your business.</div>
+              </div>
+            </div>
+            <div
+              class="w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
+              <img src="./images/other.svg" alt="">
+              <div class="h-[90px]">
+                <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Many Other Stores
+                </div>
+                <div class="w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything you
+                  need to run your business digitally.</div>
+              </div>
+            </div>
+
+          </div>
+          <div>
+            <img src="./images/mobile.png" alt="">
+          </div>
+          <div class="flex items-start flex-col h-full gap-4">
+
+            <div
+              class="w-[287px] h-[186px] p-4 bg-white rounded-lg hover:shadow-2xl ease-out duration-300 flex-col justify-center items-center gap-5 inline-flex">
+              <div class="w-11 h-11">
+                <div class="w-[39.42px] h-[39.42px]">
+                  <div class="w-[39.42px] h-[39.42px]">
+                    <img src="./images/restaurants.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="h-[90px]">
+                <div class=" text-center text-gray-800 text-xl font-medium capitalize leading-[30px]">restaurants</div>
+                <div class="w-[255px] text-center text-slate-500 text-base font-light leading-relaxed">Everything you
+                  need to run your business digitally.</div>
+              </div>
+            </div>
+
+            <div
+              class="w-[287px] h-[186px] p-4 rounded-lg hover:shadow-2xl ease-out duration-300 flex-col items-center gap-5 inline-flex">
+              <img src="./images/desert.svg" alt="">
+              <div class="h-[90px]">
+                <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Dessert shop
+                </div>
+                <div class="w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything you
+                  need to run your business digitally.</div>
+              </div>
+            </div>
+            <div
+              class="w-[287px] h-[186px] p-4 rounded-lg  hover:shadow-2xl ease-out duration-300 flex-col items-center gap-5 inline-flex">
+              <img src="./images/stationery.svg" alt="">
+              <div class="h-[90px]">
+                <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Stationery store
+                </div>
+                <div class="w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything you
+                  need to run your business digitally.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fields End -->
+
+    <!-- features Start -->
+    <div class="w-full mt-[109px] pb-[100px] bg-emerald-50 flex flex-col items-center gap-[45px]">
+      <div class="w-fit mx-auto flex items-center flex-col">
+        <div
+          class="w-fit h-[22px] px-4 py-4 mt-[100px] bg-main rounded-[36px] shadow justify-around items-center gap-0.5 inline-flex text-center">
+          <img class="py-1 mr-2" src="./images/features.svg" alt="" />
+          <div class="text-white text-base font-medium py-1 leading-[18px]">
+            Features
+          </div>
+        </div>
+        <div class="w-[944px] text-center text-gray-800 text-5xl font-semibold leading-[60px] mt-[24px]">So, why choose
+          Queue?</div>
+        <div class=" text-center text-slate-600 text-xl font-light leading-[30px]">We worked on all necessary things to
+          save your time and money.</div>
+      </div>
+      <div class="flex items-center justify-between flex-col gap-2 ">
+        <div class="flex items-center justify-between w-full">
+          <div
+            class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
+            <img class="p-3 rounded-full" src="./images/fet_1.svg" alt="">
+            <div class="w-[359px] text-center text-2xl font-bold leading-loose">Customize website</div>
+            <div class="w-[337px] text-center text-base font-light leading-normal">Stay connected with your team and
+              make quick decisions wherever </div>
+          </div>
+          <div
+            class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
+            <img class="p-3 rounded-full" src="./images/fet_2.svg" alt="">
+            <div class="w-[359px] text-center text-2xl font-bold leading-loose">Marketing Tools</div>
+            <div class="w-[337px] text-center text-base font-light leading-normal">Stay connected with your team and
+              make quick decisions wherever </div>
+          </div>
+          <div
+            class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
+            <img class="p-3 rounded-full" src="./images/fet_3.svg" alt="">
+            <div class="w-[359px] text-center text-2xl font-bold leading-loose">Support team</div>
+            <div class="w-[337px] text-center text-base font-light leading-normal">Stay connected with your team and
+              make quick decisions wherever </div>
+          </div>
+
+        </div>
+        <div class="flex items-center justify-between w-full">
+          <div
+            class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
+            <img class="p-3 rounded-full" src="./images/fet_4.svg" alt="">
+            <div class="w-[359px] text-center text-2xl font-bold leading-loose">Order Management</div>
+            <div class="w-[337px] text-center text-base font-light leading-normal">Stay connected with your team and
+              make quick decisions wherever </div>
+          </div>
+          <div
+            class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
+            <img class="p-3 rounded-full" src="./images/fet_5.svg" alt="">
+            <div class="w-[359px] text-center text-2xl font-bold leading-loose">Many ways to pay</div>
+            <div class="w-[337px] text-center text-base font-light leading-normal">Stay connected with your team and
+              make quick decisions wherever </div>
+          </div>
+          <div
+            class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
+            <img class="p-3 rounded-full" src="./images/fet_6.svg" alt="">
+            <div class="w-[359px] text-center text-2xl font-bold leading-loose">No commission</div>
+            <div class="w-[337px] text-center text-base font-light leading-normal">Stay connected with your team and
+              make quick decisions wherever </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- features End -->
+
+    <!-- Pricing Start -->
+    <div class="w-full mt-[109px] pb-[100px] flex flex-col items-center gap-[45px]">
+      <div class="w-fit mx-auto flex items-center flex-col">
+        <div
+          class="w-fit h-[22px] px-4 py-4 mt-[100px] bg-main rounded-[36px] shadow justify-around items-center gap-0.5 inline-flex text-center">
+          <img class="py-1 mr-2" src="./images/pricing.svg" alt="" />
+          <div class="text-white text-base font-medium py-1 leading-[18px]">
+            Pricing
+          </div>
+        </div>
+        <div class="w-[944px] text-center text-gray-800 text-5xl font-semibold leading-[60px] mt-[24px]">Flexible
+          pricing plan for your business</div>
+        <div class=" text-center text-slate-600 text-xl font-light leading-[30px]">Choose & Manage your package to what
+          your business really needs.</div>
+      </div>
+      <div class="w-full price">
+        <div class="container mx-auto h-[733px] flex flex-row items-center justify-center gap-5">
+          <div
+            class="w-[365px] h-[733px] p-6 bg-white rounded-[15px] border border-zinc-300 flex flex-col items-center">
+            <div class="w-full h-max flex items-start flex-col justify-between mt-4 gap-3">
+              <div class="flex items-center justify-start w-full gap-3">
+                <img class="bg-gray-100 p-2 rounded-[100px]" src="./images/enterprice.svg" alt="">
+                <div class="w-[142px] h-7 text-gray-800 text-2xl font-medium leading-[30px] tracking-wide">Enterprise
+                </div>
+              </div>
+              <div class="text-gray-800 text-5xl mt-[52px] font-medium leading-[57.60px]">Let’s talk</div>
+              <div class="w-[317px] h-[0px] border border-zinc-300 mt-[10px]"></div>
+              <div class="w-[155px] text-slate-500 text-base font-light leading-tight">Features Included :</div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_green.svg" alt="">
+                <div class="text-gray-800 text-base font-light leading-normal">Custom contract and pricing</div>
+              </div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_green.svg" alt="">
+                <div class="text-gray-800 text-base font-light leading-normal">Priority support</div>
+              </div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_green.svg" alt="">
+                <div class="text-gray-800 text-base font-light leading-normal">Dedicated account manager</div>
+              </div>
+            </div>
+            <div
+              class="w-[317px] h-12 px-7 py-4 mt-auto bg-white rounded-[100px] border border-gray-300 justify-center items-center gap-2 inline-flex">
+              <div class="w-[143px] text-center text-gray-800 text-base font-medium leading-7 tracking-tight">Contact
+                Sales</div>
+            </div>
+
+          </div>
+          <div
+            class="w-[365px] h-[733px] p-6 bg-[#1D1D35] rounded-[15px] border border-zinc-300 flex flex-col items-center">
+            <div class="w-full h-max flex items-start flex-col justify-between mt-4 gap-3">
+              <div class="flex items-center justify-start w-full gap-3">
+                <img class="bg-white bg-opacity-5 p-2 rounded-[100px]" src="./images/starter_icon.svg" alt="">
+                <div class="w-[142px] h-7 text-white text-2xl font-medium leading-[30px] tracking-wide">Starter
+                </div>
+                <button
+                  class="w-[120px] h-[22px]  bg-white rounded-[36px] justify-center items-center gap-0.5 inline-flex">
+                  <div class="text-slate-700 text-xs font-normal  leading-[18px]">MOST POPULAR</div>
+                </button>
+              </div>
+              <div class="text-center text-white mt-3 text-opacity-80 text-base font-light leading-normal">Starting from
+              </div>
+              <div class="w-[276px] h-[62px]"><span class="text-white text-5xl font-medium  leading-[57.60px]">KD
+                  175</span><span class="text-white text-opacity-80 text-xl font-light  leading-relaxed">/per
+                  year</span></div>
+              <div class="w-[317px] h-[0px] border border-zinc-300 mt-[10px]"></div>
+              <div class="w-[155px] text-white text-base font-light leading-tight">Features Included :</div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_white.svg" alt="">
+                <div class="text-white text-base font-light leading-normal">1 Branch</div>
+              </div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_white.svg" alt="">
+                <div class="text-white text-base font-light leading-normal">1 User</div>
+              </div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_white.svg" alt="">
+                <div class="text-white text-base font-light leading-normal">50 items</div>
+              </div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_white.svg" alt="">
+                <div class="text-white text-base font-light leading-normal">Order Management</div>
+              </div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_white.svg" alt="">
+                <div class="text-white text-base font-light leading-normal">Stock Management</div>
+              </div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_white.svg" alt="">
+                <div class="text-white text-base font-light leading-normal">Reporting</div>
+              </div>
+              <div class="w-[155px] text-white text-base font-light leading-tight">ADD-ONS :</div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_white.svg" alt="">
+                <div class="text-white text-base font-light leading-normal">Extra Branch – 5 KD</div>
+              </div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_white.svg" alt="">
+                <div class="text-white text-base font-light leading-normal">Extra User – 5 KD</div>
+              </div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_white.svg" alt="">
+                <div class="text-white text-base font-light leading-normal">Extra User – 5 KD</div>
+              </div>
+            </div>
+            <div
+              class="w-[317px] h-12 px-7 py-4 mt-auto bg-gray-800 rounded-[100px] border border-gray-300 justify-center items-center gap-2 inline-flex">
+              <div class="w-[143px] text-center text-white text-base font-medium leading-7 tracking-tight">Contact
+                Sales</div>
+            </div>
+
+          </div>
+          <div
+            class="w-[365px] h-[733px] p-6 bg-white rounded-[15px] border border-zinc-300 flex flex-col items-center">
+            <div class="w-full h-max flex items-start flex-col justify-between mt-4 gap-3">
+              <div class="flex items-center justify-start w-full gap-3">
+                <img class="bg-white bg-opacity-5 p-2 rounded-[100px]" src="./images/queue_pro.svg" alt="">
+                <div class="w-[142px] h-7 text-2xl font-medium leading-[30px] tracking-wide">Queue Pro
+                </div>
+              </div>
+              <div class="text-center  mt-3 text-opacity-80 text-base font-light leading-normal">Starting from</div>
+              <div class="w-[276px] h-[62px]"><span class=" text-5xl font-medium  leading-[57.60px]">KD 250</span><span
+                  class=" text-opacity-80 text-xl font-light  leading-relaxed">/per year</span></div>
+              <div class="w-[317px] h-[0px] border border-zinc-300 mt-[10px]"></div>
+              <div class="w-[155px]  text-base font-light leading-tight">Same startet plan +</div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_green.svg" alt="">
+                <div class=" text-base font-light leading-normal">Pro Reports</div>
+              </div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_green.svg" alt="">
+                <div class=" text-base font-light leading-normal">Pro Marketing</div>
+              </div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_green.svg" alt="">
+                <div class=" text-base font-light leading-normal">Pro Support</div>
+              </div>
+              <div class="w-[155px]  text-base font-light leading-tight">ADD-ONS :</div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_green.svg" alt="">
+                <div class=" text-base font-light leading-normal">Extra Branch – 5 KD</div>
+              </div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_green.svg" alt="">
+                <div class=" text-base font-light leading-normal">Extra User – 5 KD</div>
+              </div>
+              <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
+                <img src="./images/Check_green.svg" alt="">
+                <div class=" text-base font-light leading-normal">Extra User – 5 KD</div>
+              </div>
+            </div>
+            <div
+              class="w-[317px] h-12 px-7 py-4 mt-auto bg-white rounded-[100px] border border-gray-300 justify-center items-center gap-2 inline-flex">
+              <div class="w-[143px] text-center  text-base font-medium leading-7 tracking-tight">Contact
+                Sales</div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- Pricing End -->
+
+    <!-- testimonial Start -->
+    <div class="container mx-auto mb-5">
+      <div class="w-full mx-auto flex items-center flex-col text-center">
+        <div class="h-8 px-4 py-1.5 bg-green-400 rounded-[100px] justify-center items-center gap-1.5 inline-flex">
+          <div class="w-5 h-5">
+            <img src="./images/testimonial.svg" alt="">
+          </div>
+          <div class="text-white text-base font-medium leading-[18px]">Testimonial</div>
+        </div>
+
+        <div id="indicators-carousel" class="relative w-full h-full my-[32px] " data-carousel="static">
+          <!-- Carousel wrapper -->
+          <div class="relative h-56 overflow-hidden rounded-lg md:h-[32rem] w-full">
+            <!-- Item 1 -->
+            <div class="duration-700 ease-in-out flex items-center justify-center flex-col gap-3 mb-3 w-full"
+              data-carousel-item="active">
+              <div class="w-[814px] desc text-center text-3xl font-medium leading-[44px] mt-[39px]">Queue dashboard is
+                something I recommend to every other restaurant owner. I am also impressed with Queue quality after-sale
+                experience, especially their customer support.</div>
+              <div class="w-[88px] h-[88px] mt-[60px]">
+                <img src="./images/Ellipse 1.png" class="w-[88px] block w-full" alt="...">
+              </div>
+              <div class="text-center text-gray-800 text-lg font-normal leading-loose">Seluman El-Qassem</div>
+              <div class="text-center text-slate-600 text-lg font-light leading-7">CEO & Founder at twins restaurant
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <!-- <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> -->
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <!-- <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> -->
+            </div>
+          </div>
+          <!-- Slider indicators -->
+          <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse -bottom-11 left-1/2">
+            <button type="button" class="w-3 h-3 rounded-full dark:!bg-main" aria-current="true" aria-label="Slide 1"
+              data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+              data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+              data-carousel-slide-to="2"></button>
+          </div>
+          <!-- Slider controls -->
+          <button type="button" disabled
+            class=" disabled:opacity-75 absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+            <span
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+              <img src="./images/Icon_inactive.svg" alt="">
+              <span class="sr-only">Previous</span>
+            </span>
+          </button>
+
+          <button type="button"
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <span
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-main  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
+              <img src="./images/arrow_active.svg" class="text-white" alt="">
+              <span class="sr-only">Next</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- testimonial End -->
+    <div class="w-full flex items-center justify-center mt-6">
+
+      <img src="./images/devider.svg" class="mt-[80px]" alt="">
+    </div>
+    <!-- cases study Start -->
+    <div class="w-[1135px] mx-auto pt-5 mb-5">
+      <div class="w-full flex-col justify-center items-center gap-[60px] flex">
+
+        <div class="flex justify-between items-end gap-5 w-full">
+          <div class="w-[769px] h-[94px] flex items-start justify-between flex-col">
+            <div class="w-[601px] h-12 text-gray-800 text-4xl font-semibold  leading-[60px]">Partners cases study</div>
+            <div class="w-[769px] text-slate-600 text-xl font-light  leading-[30px]">Get to know our customers' success
+              stories and their experience with Queue.</div>
+          </div>
+          <button
+            class="w-[183px] h-14bg-white py-3 rounded-[100px] border border-gray-300 justify-center items-center flex">
+            View More Cases
+          </button>
+        </div>
+
+        <div class="flex items-center justify-around gap3 w-full">
+
+          <div class="w-[358px] h-[452px] flex-col justify-center items-start gap-4 inline-flex">
+            <div
+              class="w-[358px] h-60 bg-gradient-to-b from-black card-1 via-black to-black rounded-md flex-col justify-start items-start flex">
+              <!-- <div class="w-[261.99px] h-[86.96px]">
+                   
+                    <div class="w-[183.01px] h-[61.23px] left-[7.36px] top-[14px] absolute bg-green-400 rounded-[100px]"></div>
+                    <div class="w-[197.72px] h-[61.23px] left-0 top-[10px] absolute bg-gray-800 rounded-[100px]"></div>
+                    <div class="w-[129px] h-[29.88px] left-[34.36px] top-[25.67px] absolute">
+                        <div class="left-[4px] top-0 absolute text-white text-base font-medium  leading-[10px]">Ahmed Khalifa</div>
+                        <div class="left-0 top-[19.88px] absolute text-white text-[11px] font-light  leading-[10px]">Mcdonald’s Kuwait CEO</div>
+                    </div>
+                    <div class="w-[82.67px] h-[79.21px]">
+                    </div>
+                </div> -->
+
+            </div>
+            <div class="self-stretch h-[196px] flex-col justify-start items-start gap-4 inline-flex">
+              <div class="self-stretch h-[156px] flex-col justify-start items-start gap-3 flex">
+                <div class="self-stretch text-slate-400 text-sm font-normal  leading-tight">Mohaned Tark • 20 Jan 2023
+                </div>
+                <div
+                  class="w-[358px] text-gray-800 text-2xl font-semibold text-ellipsis whitespace-no overflow-hidden wrap leading-normal">
+                  McDonald's and the story of increasing profits through ...</div>
+                <div class="w-[358px] text-slate-700 text-base font-light leading-normal">Ahmed Khalifa Tells the
+                  importance of electronic marketing in the management...</div>
+              </div>
+              <div class="self-stretch justify-start items-start gap-2 inline-flex">
+                <div class="mix-blend-multiply justify-start items-start flex">
+                  <div class="px-2.5 py-0.5 bg-zinc-100 rounded-2xl justify-center items-center flex">
+                    <div class="text-center text-slate-600 text-sm font-normal  leading-tight">Restaurant Marketing
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-[358px] h-[452px] flex-col justify-center items-start gap-4 inline-flex">
+            <div
+              class="w-[358px] h-60 bg-gradient-to-b card-2 from-black via-black to-black rounded-md flex-col justify-start items-start flex">
+              <!-- <div class="w-[261.99px] h-[86.96px]">
+                   
+                    <div class="w-[183.01px] h-[61.23px] left-[7.36px] top-[14px] absolute bg-green-400 rounded-[100px]"></div>
+                    <div class="w-[197.72px] h-[61.23px] left-0 top-[10px] absolute bg-gray-800 rounded-[100px]"></div>
+                    <div class="w-[129px] h-[29.88px] left-[34.36px] top-[25.67px] absolute">
+                        <div class="left-[4px] top-0 absolute text-white text-base font-medium  leading-[10px]">Ahmed Khalifa</div>
+                        <div class="left-0 top-[19.88px] absolute text-white text-[11px] font-light  leading-[10px]">Mcdonald’s Kuwait CEO</div>
+                    </div>
+                    <div class="w-[82.67px] h-[79.21px]">
+                    </div>
+                </div> -->
+
+            </div>
+            <div class="self-stretch h-[196px] flex-col justify-start items-start gap-4 inline-flex">
+              <div class="self-stretch h-[156px] flex-col justify-start items-start gap-3 flex">
+                <div class="self-stretch text-slate-400 text-sm font-normal  leading-tight">Mohaned Tark • 20 Jan 2023
+                </div>
+                <div
+                  class="w-[358px] text-gray-800 text-2xl font-semibold text-ellipsis whitespace-no overflow-hidden wrap leading-normal">
+                  In five guys we found queue is easy to manage our bus...</div>
+                <div class="w-[358px] text-slate-700 text-base font-light leading-normal">Five guys owners Tell the
+                  importance of electronic marketing in the management...</div>
+              </div>
+              <div class="self-stretch justify-start items-start gap-2 inline-flex">
+                <div class="mix-blend-multiply justify-start items-start flex">
+                  <div class="px-2.5 py-0.5 bg-zinc-100 rounded-2xl justify-center items-center flex">
+                    <div class="text-center text-slate-600 text-sm font-normal  leading-tight">Restaurant Marketing
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-[358px] h-[452px] flex-col justify-center items-start gap-4 inline-flex">
+            <div
+              class="w-[358px] h-60 bg-gradient-to-b card-3 from-black via-black to-black rounded-md flex-col justify-start items-start flex">
+              <!-- <div class="w-[261.99px] h-[86.96px]">
+                   
+                    <div class="w-[183.01px] h-[61.23px] left-[7.36px] top-[14px] absolute bg-green-400 rounded-[100px]"></div>
+                    <div class="w-[197.72px] h-[61.23px] left-0 top-[10px] absolute bg-gray-800 rounded-[100px]"></div>
+                    <div class="w-[129px] h-[29.88px] left-[34.36px] top-[25.67px] absolute">
+                        <div class="left-[4px] top-0 absolute text-white text-base font-medium  leading-[10px]">Ahmed Khalifa</div>
+                        <div class="left-0 top-[19.88px] absolute text-white text-[11px] font-light  leading-[10px]">Mcdonald’s Kuwait CEO</div>
+                    </div>
+                    <div class="w-[82.67px] h-[79.21px]">
+                    </div>
+                </div> -->
+
+            </div>
+            <div class="self-stretch h-[196px] flex-col justify-start items-start gap-4 inline-flex">
+              <div class="self-stretch h-[156px] flex-col justify-start items-start gap-3 flex">
+                <div class="self-stretch text-slate-400 text-sm font-normal  leading-tight">Mohaned Tark • 20 Jan 2023
+                </div>
+                <div
+                  class="w-[358px] text-gray-800 text-2xl font-semibold text-ellipsis whitespace-no overflow-hidden wrap leading-normal">
+                  Moayed Tells the importance of electronic marketing in the management restaurant ...</div>
+                <div class="w-[358px] text-slate-700 text-base font-light leading-normal">Moayed Tells the importance of
+                  electronic marketing in the management restaurant ...</div>
+              </div>
+              <div class="self-stretch justify-start items-start gap-2 inline-flex">
+                <div class="mix-blend-multiply justify-start items-start flex">
+                  <div class="px-2.5 py-0.5 bg-zinc-100 rounded-2xl justify-center items-center flex">
+                    <div class="text-center text-slate-600 text-sm font-normal  leading-tight">Restaurant Marketing
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- cases study End -->
+
+    <!-- faq Start -->
+    <div class="w-full h-full mt-[100px]">
+      <div class="faq bg-emerald-50">
+        <div class="flex-col justify-center items-center gap-[45px] flex mx-auto pt-[100px]">
+          <div class="h-48 flex-col justify-center items-center gap-6 flex">
+            <div class="w-[98px] h-8 px-5 py-1.5 bg-green-400 rounded-[100px] justify-center items-center gap-1 flex">
+              <div class="w-5 h-5">
+                <img src="./images/FAQ.svg" alt="">
+              </div>
+              <div class="text-white text-base font-medium  leading-[18px]">FAQ</div>
+            </div>
+            <div class="h-[114px]">
+              <div class="w-[768px] text-center text-gray-800 text-5xl font-semibold  leading-[57.60px]">What the FAQ ?
+              </div>
+            </div>
+            <div class="w-[659px] text-center text-slate-600 text-lg font-light  leading-[27px]">Most frequently asked
+              questions can be found here, explore more questions if there is more.</div>
+          </div>
+
+          <div class="w-[936px] flex-col justify-start items-start gap-8 flex">
+
+            <details
+              class="group w-full px-6 py-5 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
+              <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                <span> Is Queue an app ?</span>
+                <span class="transition group-open:rotate-180">
+                  <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+              </summary>
+              <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+                This platform is a highly reliable and feature-rich service that offers a wide range
+                of tools and functionality. It is competitively priced and offers a variety of billing options
+                to
+                suit different needs and budgets.
+              </p>
+            </details>
+
+            <details
+              class="group w-full px-6 py-5 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
+              <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                <span> Which countries is Queue available in ?</span>
+                <span class="transition group-open:rotate-180">
+                  <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+              </summary>
+              <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+                This platform is a highly reliable and feature-rich service that offers a wide range
+                of tools and functionality. It is competitively priced and offers a variety of billing options
+                to
+                suit different needs and budgets.
+              </p>
+            </details>
+
+            <details
+              class="group w-full px-6 py-5 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
+              <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                <span> Is Queue suitable for small businesses ?</span>
+                <span class="transition group-open:rotate-180">
+                  <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+              </summary>
+              <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+                This platform is a highly reliable and feature-rich service that offers a wide range
+                of tools and functionality. It is competitively priced and offers a variety of billing options
+                to
+                suit different needs and budgets.
+              </p>
+            </details>
+
+            <details
+              class="group w-full px-6 py-5 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
+              <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                <span> How long do you provide support ?</span>
+                <span class="transition group-open:rotate-180">
+                  <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+              </summary>
+              <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+                This platform is a highly reliable and feature-rich service that offers a wide range
+                of tools and functionality. It is competitively priced and offers a variety of billing options
+                to
+                suit different needs and budgets.
+              </p>
+            </details>
+            <details
+              class="group w-full px-6 py-5 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
+              <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                <span> Can I try it before I subscribe and pay ?</span>
+                <span class="transition group-open:rotate-180">
+                  <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+              </summary>
+              <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+                This platform is a highly reliable and feature-rich service that offers a wide range
+                of tools and functionality. It is competitively priced and offers a variety of billing options
+                to
+                suit different needs and budgets.
+              </p>
+            </details>
+
+          </div>
+          <button
+            class="w-[210px] h-[67px] px-[23px] py-5 bg-white rounded-[100px] border border-gray-300 justify-center items-center gap-2 flex mb-[100px]">
+            <div class="text-gray-800 text-lg font-medium  leading-[27px]">View More FAQ</div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- faq End -->
+
+    <!-- ready Start -->
+    <div class="w-full mt-[106px]">
+      <div class="container mx-auto flex flex-col items-center ">
+        <div class="h-[226px] flex flex-col items-center justify-between ready py-5">
+          <div class="w-[529px] h-[53px] text-center text-gray-800 text-5xl font-bold leading-[44px]">Ready to get
+            started</div>
+          <div class="w-[503px] text-center text-slate-600 text-lg font-light  leading-[30px]"> Let's come together and
+            showcase how we can attain growth your business.</div>
+          <div class="w-full md:w-[313px] h-11 flex items-center justify-center gap-3">
+            <button class="w-[148px] h-11 px-5 py-2 bg-green-400 rounded-[100px] justify-center items-center gap-2 inline-flex">
+              Book a Demo
+            </button>
+            <button
+              class="w-[149px] h-11 bg-white rounded-[100px] border border-gray-300 justify-center items-center gap-2 inline-flex">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+        <div class="ipad">
+          <img src="./images/Ipad Pro.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- ready End -->
+    
+    
+    <!-- footer Start -->
+    <div class="w-full bg-[#343E55] relative py-14 ">
+      <div class="flex items-center justify-around z-50 my-5">
+        <div class="w-[544.28px] text-white text-4xl font-medium leading-[47px]">
+          Subscribe to our newsletter to stay in touch.
+        </div>
+        <div class="flex items-center flex-col">
+          <div class="h-[60px] text-white text-xl font-light leading-[30px] tracking-tight">Sign up to receive updates and feature releases to your email.<br/></div>
+
+          <div class="w-[456px] h-14 pl-6 pr-2 py-2 bg-zinc-100 bg-opacity-10 rounded-[100px] justify-center items-center gap-[94px] inline-flex">
+            <div class="w-[204px] text-white text-base font-light leading-normal">Enter your email</div>
+            <div class="w-[126px] px-[23px] py-2 bg-green-400 rounded-[100px] shadow justify-center items-center gap-2 flex">
+                <div class="text-green-50 text-base font-medium leading-normal">Subscribe</div>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="w-full h-[221px] px-[151px] py-[45px] flex-col justify-start items-start gap-[45px] inline-flex">
+        <div class="self-stretch justify-center items-center gap-8 inline-flex">
+            <div class="grow shrink basis-0 flex-col justify-start items-start gap-6 inline-flex">
+                <img class="w-[106px] h-8 relative" src="./images/logo.png" />
+            </div>
+            <div class="justify-center items-center gap-8 flex">
+                <div class="text-white text-base font-normal leading-normal">Services</div>
+                <div class="text-white text-base font-normal leading-normal">Features</div>
+                <div class="text-white text-base font-normal leading-normal">Pricing</div>
+                <div class="text-white text-base font-normal leading-normal">FAQ’s</div>
+                <div class="text-white text-base font-normal leading-normal">Contact us</div>
+            </div>
+            <div class="grow shrink basis-0 h-6 justify-end items-center gap-3 flex">
+              <div class="w-6 h-6 relative">
+                <img src="./images/Facebook.svg" alt="">
+              </div>
+              <div class="w-6 h-6 relative">
+                <img src="./images/Instagram.svg" alt="">
+              </div>
+              <div class="w-6 h-6 relative">
+                <img src="./images/Twitter.svg" alt="">
+              </div>
+              <div class="w-6 h-6 relative">
+                <img src="./images/LinkedIn.svg" alt="">
+              </div>
+            </div>
+        </div>
+        <div class="self-stretch h-[54px] flex-col justify-start items-center gap-8 flex">
+            <div class="self-stretch h-px bg-gray-50 bg-opacity-10"></div>
+            <div class="justify-center items-start gap-6 inline-flex">
+                <div class="text-white text-sm font-normal leading-[21px]">© 2023 Queue. All right reserved</div>
+                <div class="self-stretch justify-start items-start gap-6 inline-flex">
+                    <div class="text-white text-sm font-normal underline leading-[21px]">Privacy Policy</div>
+                    <div class="text-white text-sm font-normal underline leading-[21px]">Terms of Service</div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- <div class="w-full bg-[#343E55]  h-[221px] px-[151px] py-[45px] flex-col justify-start items-start gap-[45px] flex z-50">
+        <div class="self-stretch justify-center items-center gap-8 inline-flex">
+            <div class="grow shrink basis-0 flex-col justify-start items-start gap-6 inline-flex">
+                <img class="w-[106px] h-8 relative" src="./images/logo.png" />
+            </div>
+            <div class="justify-center items-center gap-8 flex">
+                <div class="text-white text-base font-normal leading-normal">Services</div>
+                <div class="text-white text-base font-normal leading-normal">Features</div>
+                <div class="text-white text-base font-normal leading-normal">Pricing</div>
+                <div class="text-white text-base font-normal leading-normal">FAQ’s</div>
+                <div class="text-white text-base font-normal leading-normal">Contact us</div>
+            </div>
+            <div class="grow shrink basis-0 h-6 justify-end items-center gap-3 flex">
+                <div class="w-6 h-6 relative">
+                  <img src="./images/Facebook.svg" alt="">
+                </div>
+                <div class="w-6 h-6 relative">
+                  <img src="./images/Instagram.svg" alt="">
+                </div>
+                <div class="w-6 h-6 relative">
+                  <img src="./images/Twitter.svg" alt="">
+                </div>
+                <div class="w-6 h-6 relative">
+                  <img src="./images/LinkedIn.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="self-stretch h-[54px] flex-col justify-start items-center gap-8 flex py-5">
+            <div class="justify-center items-start gap-6 inline-flex">
+                <div class="self-stretch justify-start items-start gap-6 inline-flex">
+                    <div class="text-white text-sm font-normal underline leading-[21px]">Privacy Policy</div>
+                    <div class="text-white text-sm font-normal underline leading-[21px]">Terms of Service</div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    </div>
+    
+    <!-- footer End -->
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
+</html>
