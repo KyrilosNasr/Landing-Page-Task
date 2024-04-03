@@ -2,11 +2,10 @@
 <html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="initial-scale=1.0, width=device-width">
-
-  <!-- tailwind css -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
   <script>
@@ -15,10 +14,11 @@
         extend: {
           colors: {
             main: "#4ABB82",
-          },
-        },
-      },
-    };
+          }
+        }
+      }
+    }
+
   </script>
   <!-- alexandria font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +30,8 @@
 <body>
   <div class="main w-full max-w-full bg-white mx-auto">
     <!-- Nav Start -->
-    <nav class="flex items-center justify-around flex-wrap p-5 h-[82px] fixed top-0 max-w-full w-full bg-white z-50">
+    <nav
+      class="flex items-center mx-auto justify-around flex-wrap p-5 h-[82px] sticky overflow-hidden w-full top-0 z-10 scroll-smooth lg:max-w-full w-full bg-white z-50">
       <div class="w-full block lg:flex lg:items-center lg:w-auto hidden md:items-center">
         <div class="flex items-center flex-shrink-0 mr-6">
           <img src="./images/logo.png" class="w-[106px]" alt="" />
@@ -80,7 +81,7 @@
         </div>
       </div>
 
-      <div class="flex items-center justify-between lg:hidden w-3/4">
+      <div class="flex items-center justify-between lg:hidden w-full">
         <div class="flex items-center flex-shrink-0 mr-6">
           <img src="./images/logo.png" class="w-[106px]" alt="" />
         </div>
@@ -112,13 +113,13 @@
       </div>
     </nav>
     <!-- Nav End -->
-    <div class="fixed bottom-4 right-4 z-50">
+    <div class="lg:block hidden bottom-4 right-4 z-50">
       <button class="font-bold py-2 px-4 rounded-full">
-      <img src="./images/float button.svg" alt="">
-    </button>
-  </div>
+        <img src="./images/float button.svg" alt="">
+      </button>
+    </div>
     <!-- header-section start -->
-    <div class="lg:container w-full mx-auto mt-[100px] flex items-center justify-center">
+    <div class="lg:container w-full mx-auto lg:mt-[100px] mt-[50px] flex items-center justify-center">
       <div class="w-full items-center flex flex-col">
         <div
           class="w-[139px] h-[22px] px-2 py-1 bg-main rounded-[36px] shadow justify-center items-center gap-0.5 inline-flex text-center mb-[24px]">
@@ -128,32 +129,32 @@
           </div>
         </div>
         <div
-          class="lg:w-[1007px] w-[342.98px] mt-[20px] lg:mt-0 text-center text-gray-800 lg:text-[56px] text-3xl lg:font-bold font-semibold lg:leading-[71px] leading-[38px]">
+          class="lg:w-[1007px] w-[50%] mt-[20px] lg:mt-0 text-center text-gray-800 lg:text-[56px] text-3xl lg:font-bold font-semibold lg:leading-[71px] leading-[38px]">
           Be online with a dedicated website <br />
           to represent your brand
         </div>
         <div
-          class="lg:w-[715px] w-[342.98px] lg:mt-0 mt-[20px] text-center text-slate-700 lg:text-xl text-base font-light leading-normal lg:leading-[30px">
+          class="lg:w-[715px] w-[50%] lg:mt-0 mt-[20px] text-center text-slate-700 lg:text-xl text-base font-light leading-normal lg:leading-[30px">
           Start working with Queue that can provide everything you need to
           generate sales, drive traffic, connect with your loyal customers.
         </div>
-        <div class="w-[377px] h-[50px] mt-[32px] flex items-center md:flex-row flex-col justify-between gap-3">
-          <div
-            class="w-[182px] h-[50px] px-[30px] py-2 bg-main rounded-[100px] justify-center items-center gap-2 inline-flex">
-            <div class="text-white text-lg font-medium leading-7">
-              Book a Demo
-            </div>
-          </div>
+        <div
+          class="lg:w-[377px] w-[50%] lg:h-[50px] mt-[32px] flex items-center lg:flex-row flex-col justify-between gap-3">
+          <button
+            class="w-full h-[50px] px-[30px] py-2 bg-main rounded-[100px] justify-center items-center gap-2 inline-flex text-white">
+            Book a Demo
+          </button>
 
-          <div
-            class="h-[50px] px-7 py-2 bg-white rounded-[100px] border border-gray-300 justify-center items-center gap-2 inline-flex">
-            <div class="text-gray-800 text-lg font-medium  leading-7">Contact Sales</div>
-          </div>
+          <button
+            class="h-[50px] w-full px-7 py-2 bg-white rounded-[100px] border border-gray-300 justify-center items-center gap-2 inline-flex text-gray-800 text-lg">
+            Contact Sales
+          </button>
         </div>
       </div>
     </div>
     <!-- header-section end -->
-    <img src="./images/header.jpg" class="w-screen h-[648px]" alt="" />
+    <img src="./images/header.jpg" class="w-screen h-[648px] md:block hidden" alt="" />
+    <img src="./images/header-sm.png" class="w-screen lg:h-[648px] h-[300px] block md:hidden" alt="" />
 
     <!-- partners section Start -->
     <div class="bg-emerald-50 w-full">
@@ -161,23 +162,44 @@
         <h2 class="w-[168px] h-[31px] text-center text-gray-800 text-3xl font-semibold mt-[100px]">
           Trusted by
         </h2>
-        <div class="text-center text-slate-400 text-xl font-light">
+        <div class="w-full text-center text-slate-400 text-xl font-light">
           They are not our clients, but partners in success
         </div>
-        <div class="flex items-center justify-between lg:gap-6 flex-wrap flex-row w-full">
-          <div class="flex lg:flex-row flex-col items-center justify-around lg:w-full w-fit">
-            <img src="./images/amazon.svg" class="w-fit h-[38px]" alt="" />
-            <img src="./images/slack.svg" class="w-fit" alt="" />
-            <img src="./images/Union.svg" class="w-fit" alt="" />
-            <img src="images/image 51.svg" class="w-fit" alt="" />
-            <img src="./images/image 53.svg" class="w-fit" alt="" />
+        <div
+          class="flex items-center lg:justify-between justify-around my-6 lg:gap-6 flex-wrap lg:flex-row flex-row-reverse w-full">
+          <div class="flex lg:flex-row flex-col items-center justify-around lg:w-full w-fit gap-6">
+            <div class="w-fit h-[38px]">
+              <img src="./images/amazon.svg" alt="" />
+            </div>
+            <div class="w-fit h-[38px]">
+              <img src="./images/slack.svg" class="w-fit" alt="" />
+            </div>
+            <div class="w-fit h-[38px]">
+              <img src="./images/Union.svg" class="w-fit" alt="" />
+            </div>
+            <div class="w-fit h-[38px]">
+              <img src="images/image 51.svg" class="w-fit" alt="" />
+            </div>
+            <div class="w-fit h-[38px]">
+              <img src="./images/image 53.svg" class="w-fit" alt="" />
+            </div>
           </div>
-          <div class="flex lg:flex-row flex-col items-center justify-around lg:w-full w-fit">
-            <img src="./images/Company logo.svg" class="w-fit" alt="" />
-            <img src="./images/Company logo (1).svg" class="w-fit" alt="" />
-            <img src="./images/Company logo (2).svg" class="w-fit" alt="" />
-            <img src="./images/Company logo (3).svg" class="w-fit" alt="" />
-            <img src="./images/Company logo (4).svg" class="w-fit" alt="" />
+          <div class="flex lg:flex-row flex-col items-center justify-around lg:w-full w-fit gap-6">
+            <div class="w-fit h-[38px]">
+              <img src="./images/Company logo.svg" class="w-fit h-[38px]" alt="" />
+            </div>
+            <div class="w-fit h-[38px]">
+              <img src="./images/Company logo (1).svg" class="w-fit h-[38px]" alt="" />
+            </div>
+            <div class="w-fit h-[38px]">
+              <img src="./images/Company logo (2).svg" class="w-fit h-[38px]" alt="" />
+            </div>
+            <div class="w-fit h-[38px]">
+              <img src="./images/Company logo (3).svg" class="w-fit h-[38px]" alt="" />
+            </div>
+            <div class="w-fit h-[38px]">
+              <img src="./images/Company logo (4).svg" class="w-fit h-[38px]" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -185,22 +207,83 @@
     <!-- partners section End -->
 
     <!-- Services Start -->
-    <div class="container mx-auto relative">
-      <div class="w-full items-center flex flex-col">
-        <div class="w-fit h-[22px] px-4 py-4 mt-[100px] bg-main rounded-[36px] shadow justify-around items-center gap-0.5 inline-flex text-center">
+    <div class="lg:container lg:mx-auto lg:relative w-full">
+      <div class="w-full items-center justify-center flex flex-col">
+        <div
+          class="w-fit lg:h-[22px] px-4 py-1 lg:py-4 mt-[100px] bg-main rounded-[36px] shadow justify-around items-center gap-0.5 inline-flex text-center">
           <img class="py-1 mr-2" src="./images/services.svg" alt="" />
           <div class="text-white text-base font-medium py-1 leading-[18px]">
             Services
           </div>
         </div>
-        <div class="lg:w-[944px] text-center mt-6 text-gray-800 text-5xl font-semibold leading-[60px]">Track your business
-          in a new way</div>
-        <div class="text-center text-slate-600 text-xl font-light leading-[30px]">Here are some services that help your
-          business with Queue Soluation.</div>
+        <div class="flex items-center flex-col text-center w-fit">
+          <div class="lg:w-[944px] w-300px text-center mt-6 text-gray-800 text-5xl font-semibold leading-[60px] gap-4">
+            Track your business
+            in a new way</div>
+          <div class="text-center text-slate-600 text-xl font-light leading-[30px]">Here are some services that help
+            your
+            business with Queue Soluation.</div>
+        </div>
+        <!-- smaller displays slider -->
+
+
+        <div id="controls-carousel" class="relative w-full md:hidden block mt-5" data-carousel="static">
+
+          <!-- Carousel wrapper -->
+          <div class="relative h-10  overflow-hidden rounded-lg md:h-96">
+            <!-- Item 1 -->
+            <div
+              class="hidden duration-700 ease-in-out absolute flex items-center gap-3 w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-3"
+              data-carousel-item>
+              <div>
+                <img src="./images/sales_active.svg" alt="">
+              </div>
+              <div class="">
+                sales
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div
+              class="hidden duration-700 ease-in-out absolute flex items-center gap-3 w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-3"
+              data-carousel-item>
+              <div>
+                <img src="./images/sales_active.svg" alt="">
+              </div>
+              <div class="">
+                sales
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div
+              class="hidden duration-700 ease-in-out absolute flex items-center gap-3 w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-3"
+              data-carousel-item>
+              <div>
+                <img src="./images/sales_active.svg" alt="">
+              </div>
+              <div class="">
+                sales
+              </div>
+            </div>
+
+          </div>
+          <!-- Slider controls -->
+          <button type="button"
+            class="absolute top-0 end-12 z-30 flex items-center w-[30px] h-[30px] justify-center cursor-pointer group focus:outline-none bg-gray-100 bg-opacity-80 rounded-full"
+            data-carousel-prev>
+            <img src="./images/left.svg" alt="">
+            </span>
+          </button>
+          <button type="button"
+            class="absolute top-0 end-0 bg-main z-30 w flex items-center w-[30px] h-[30px] justify-center rounded-full cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <img src="./images/right.svg" alt="">
+          </button>
+        </div>
 
         <div
-          class="w-[1143.26px] mx-auto h-[82px] p-2.5 bg-slate-100 rounded-[100px] hidden justify-start items-start lg:gap-[45px] gap-3 flex-col lg:flex flex-wrap mt-[66px]">
-          <div class="px-[65px] py-3 bg-white rounded-[87.05px] shadow justify-start items-center gap-[10.32px] flex">
+          class="lg:w-[1005px] w-[1124.26px] mx-auto mx-5 h-[82px] lg:p-2.5 bg-slate-100 rounded-[100px] hidden justify-center items-center lg:gap-[45px] gap-3 flex-col lg:flex hidden flex-wrap mt-[66px]">
+          <div class="xl:px-[65px] px-[30px] py-3 bg-white rounded-[87.05px] shadow justify-start items-center gap-[10.32px] flex">
             <div class="w-6 h-6 ">
               <div class="w-5 h-[18px] left-0 top-0">
                 <img src="./images/sales_active.svg" alt="sales">
@@ -209,7 +292,7 @@
             <div class="text-gray-800 text-[20.89px] font-normal leading-[37.82px] tracking-tight">Sales</div>
           </div>
           <div
-            class="px-[65px] py-3 rounded-[87.05px] hover:bg-white shadow justify-start items-center gap-[10.32px] flex">
+            class="xl:px-[65px] px-[30px] py-3 rounded-[87.05px] hover:bg-white shadow justify-start items-center gap-[10.32px] flex">
             <div class="w-6 h-6 mt-1">
               <div class="w-5 h-5 left-0 top-0">
                 <img src="./images/Manage_inactive.svg" alt="">
@@ -217,8 +300,8 @@
             </div>
             <div class="text-slate-500 text-[20.89px] font-normal leading-[37.82px] tracking-tight">Manage</div>
           </div>
-          <div
-            class="px-[65px] py-3 rounded-[87.05px] hover:bg-white shadow justify-start items-center gap-[10.32px] flex">
+          <divx
+            class="xl:px-[65px] px-[30px] py-3 rounded-[87.05px] hover:bg-white shadow justify-start items-center gap-[10.32px] flex">
             <div class="w-6 h-6 mt-2">
               <div class="w-[18px] h-5 left-[3px] top-[2px]">
                 <div class="w-[18px] h-5 left-0 top-0">
@@ -227,9 +310,9 @@
               </div>
             </div>
             <div class="text-slate-500 text-[20.89px] font-normal leading-[37.82px] tracking-tight">Reports</div>
-          </div>
+          </divx>
           <div
-            class="px-[65px] py-3 rounded-[87.05px] hover:bg-white shadow justify-start items-center gap-[10.32px] flex">
+            class="xl:px-[65px] px-[30px] py-3 rounded-[87.05px] hover:bg-white shadow justify-start items-center gap-[10.32px] flex">
             <div class="w-6 h-6 mt-1">
               <div class="w-[18.52px] h-5 left-[2.71px] top-[1.98px]">
                 <div class="w-[18.52px] h-[15.41px] left-0 top-0">
@@ -240,60 +323,43 @@
             <div class="text-slate-500 text-[20.89px] font-normal leading-[37.82px] tracking-tight">Marketing</div>
           </div>
         </div>
+        <div
+          class="lg:w-[1155.85px] lg:h-[465.84px] mt-[65px] gap-3 flex xl:flex-row flex-col-reverse lg:flex-row items-center items-start justify-between flex-wrap">
+          <div class="lg:w-[487.19px] lg:h-[465.84px] flex items-start justify-between flex-col flex-wrap gap-3 mx-2">
 
-        <div class="w-full h-[38px] relative">
-          <div class="w-[84.37px] h-[38px] px-2 py-1 left-0 top-0 absolute bg-white justify-start items-center gap-[7.93px] inline-flex">
-              <div class="w-[18.44px] h-[18.44px] relative">
-                  <div class="w-[15.37px] h-[13.83px] left-[1.54px] top-[2.30px] absolute">
-                      <div class="w-[15.37px] h-[13.83px] left-0 top-0 absolute">
-                      </div>
-                  </div>
-              </div>
-              <div class="text-gray-800 text-base font-normal font-['Alexandria'] leading-[29.06px] tracking-tight">Sales</div>
-          </div>
-          <div class="w-[66px] h-[27px] left-[276.98px] top-[5.50px] absolute">
-              <div class="w-[27px] h-[27px] p-[6.75px] left-[66px] top-0 absolute origin-top-left rotate-180 bg-green-400 rounded-[28.13px] border justify-center items-center gap-[4.50px] inline-flex">
-                  <div class="w-[13.50px] h-[13.50px] p-[2.25px] justify-center items-center flex"></div>
-              </div>
-              <div class="w-[27px] h-[27px] p-[6.75px] left-[27px] top-0 absolute origin-top-left rotate-180 bg-gray-100 bg-opacity-80 rounded-[28.13px] justify-center items-center gap-[4.50px] inline-flex">
-                  <div class="w-[13.50px] h-[13.50px] relative"></div>
-              </div>
-          </div>
-      </div>
-        <div class="lg:w-[1155.85px] h-[465.84px] mt-[65px] gap-3 flex lg:flex-row flex-col-reverse justify-between">
-          <div class="lg:w-[487.19px] h-[465.84px] flex items-start justify-between flex-col">
-
-            <div class="w-[483.78px] left-[3px]  text-gray-800 text-[42px] font-bold leading-[50.40px]">Custmoize
+            <div
+              class="lg:w-[483.78px] lg:left-[3px]  text-gray-800 lg:text-[42px] text-3xl font-bold lg:leading-[50.40px]">
+              Customize
               responsive website for ordering.</div>
             <div
-              class="w-[486.19px] h-[123.84px] left-[1px] top-[124px]  text-slate-600 text-xl font-light leading-[30px]">
+              class="lg:w-[486.19px] lg:h-[123.84px] lg:left-[1px] top-[124px] lg:text-slate-600 text-slate-700 lg:text-xl text-base font-light lg:leading-[30px] leading-normal gap3">
               Launch a website that is suitable for all devices, which allows your customers to browse and purchase your
               products using different and diverse payment methods.<br /></div>
-            <div class="lg:w-[468px] w-full h-[114px]">
-              <div class="w-[221px] h-[30px] flex items-center">
+            <div class="lg:w-[468px] w-full lg:h-[114px] flex flex-col gap-3 items-start justify-between">
+              <div class="lg:w-[221px] lg:h-[30px] flex items-start ">
                 <img src="./images/chevron-right-double.svg" alt="">
                 <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">Responsive website.</div>
               </div>
-              <div class="w-[404px] h-[30px] flex items-center">
+              <div class="lg:w-[404px] lg:h-[30px] flex items-start">
                 <img src="./images/chevron-right-double.svg" alt="">
                 <div class="left-[26px] text-slate-700 text-xl font-light leading-[30px]">New, trending, and adjustable
                   website.</div>
 
               </div>
-              <div class="w-[468px] h-[30px] flex items-center">
+              <div class="lg:w-[468px] lg:h-[30px] flex items-start">
                 <img src="./images/chevron-right-double.svg" alt="">
                 <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">comfortable and easy
                   purchasing experience.</div>
 
               </div>
             </div>
-            <div class="w-[128.54px] h-14 py-4 rounded-[100px] justify-center items-center gap-px inline-flex">
-              <div class="w-[103.54px] text-center text-green-400 text-lg font-medium underline leading-normal">Learn
+            <div class="lg:w-[128.54px] lg:h-14 lg:py-4 justify-center items-center flex">
+              <div class="lg:w-[103.54px] text-center text-green-400 text-lg font-medium underline leading-normal">Learn
                 More</div>
-              <div class="w-6 h-6"></div>
+              <img src="./images/chevron-right.svg" class="w-6 h-6">
             </div>
           </div>
-          <img class="w-[569.15px] h-[445.66px] rounded-[10px]" src="./images/pic.png" />
+          <img class="lg:w-[569.15px] w-[340px] lg:h-[445.66px] rounded-[10px]" src="./images/pic.png" />
         </div>
       </div>
     </div>
@@ -302,46 +368,50 @@
 
     <!-- fields Start -->
     <div class="container mx-auto mt-[31px]">
-      <div class="flex items-center flex-col w-full">
-        <div class="w-full h-auto flex items-center justify-center">
-          <div class="w-[613px] h-[124.50px] mt-[120px]">
+      <div class="flex items-center flex-col w-full flex-wrap w-full">
+        <div class="w-full flex items-center justify-center">
+          <div class="lg:w-[613px] lg:h-[124.50px] mt-[120px]">
             <span class="fields"></span>
-            <div
-              class="w-[561.07px] h-12 left-[25.96px] top-0 text-center text-gray-800 text-4xl font-semibold leading-[60px">
-              Queue is bulid for many fields.</div>
-            <div class="w-[613px] left-0 top-[64.50px] text-center text-slate-600 text-xl font-light leading-[30px]">
-              Whatever your field of trade, you can count on Queue and its support for various sectors.</div>
+            <div class="w-full flex flex-col items-center justify-between flex-wrap">
+              <div class="lg:w-[561.07px] lg:h-12  text-center text-gray-800 text-4xl font-semibold leading-[60px">
+                Queue is bulid for many fields.</div>
+              <div class="lg:w-[613px]  text-center text-slate-600 text-xl font-light leading-[30px]">
+                Whatever your field of trade, you can count on Queue and its support for various sectors.</div>
+            </div>
           </div>
         </div>
 
-        <div class="flex items-center justify-between w-full mt-[72px]">
+        <div class="lg:flex hidden items-center justify-between w-full mt-[72px]">
           <div class="flex items-start flex-col h-full gap-4">
             <div
-              class="w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
+              class="lg:w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
               <img src="./images/caffe.svg" alt="">
               <div class="h-[90px]">
                 <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Cafe Shop</div>
-                <div class="w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything you
+                <div class="lg:lg:w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything
+                  you
                   need to run your business digitally.</div>
               </div>
             </div>
             <div
-              class="w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
+              class="lg:w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
               <img src="./images/shop.svg" alt="">
               <div class="h-[90px]">
                 <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Super Markets
                 </div>
-                <div class="w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Many advantages
+                <div class="lg:w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Many
+                  advantages
                   to suit your business.</div>
               </div>
             </div>
             <div
-              class="w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
+              class="lg:w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
               <img src="./images/other.svg" alt="">
               <div class="h-[90px]">
                 <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Many Other Stores
                 </div>
-                <div class="w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything you
+                <div class="lg:w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything
+                  you
                   need to run your business digitally.</div>
               </div>
             </div>
@@ -353,7 +423,7 @@
           <div class="flex items-start flex-col h-full gap-4">
 
             <div
-              class="w-[287px] h-[186px] p-4 bg-white rounded-lg hover:shadow-2xl ease-out duration-300 flex-col justify-center items-center gap-5 inline-flex">
+              class="lg:w-[287px] lg:h-[186px] p-4 bg-white rounded-lg hover:shadow-2xl ease-out duration-300 flex-col justify-center items-center gap-5 inline-flex">
               <div class="w-11 h-11">
                 <div class="w-[39.42px] h-[39.42px]">
                   <div class="w-[39.42px] h-[39.42px]">
@@ -369,26 +439,116 @@
             </div>
 
             <div
-              class="w-[287px] h-[186px] p-4 rounded-lg hover:shadow-2xl ease-out duration-300 flex-col items-center gap-5 inline-flex">
+              class="lg:w-[287px] h-[186px] p-4 rounded-lg hover:shadow-2xl ease-out duration-300 flex-col items-center gap-5 inline-flex">
               <img src="./images/desert.svg" alt="">
               <div class="h-[90px]">
                 <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Dessert shop
                 </div>
-                <div class="w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything you
+                <div class="lg:w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything
+                  you
                   need to run your business digitally.</div>
               </div>
             </div>
             <div
-              class="w-[287px] h-[186px] p-4 rounded-lg  hover:shadow-2xl ease-out duration-300 flex-col items-center gap-5 inline-flex">
+              class="lg:w-[287px] h-[186px] p-4 rounded-lg  hover:shadow-2xl ease-out duration-300 flex-col items-center gap-5 inline-flex">
               <img src="./images/stationery.svg" alt="">
               <div class="h-[90px]">
                 <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Stationery store
                 </div>
-                <div class="w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything you
+                <div class="lg:w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything
+                  you
                   need to run your business digitally.</div>
               </div>
             </div>
 
+          </div>
+        </div>
+
+        <div class="md:flex flex-col lg:hidden items-center justify-between w-full mt-[72px] gap-4">
+          <div class="flex flex-row items-center justify-around w-full flex-wrap">
+            <div class="flex lg:items-start items-center flex-col h-full gap-4 flex-wrap">
+              <div
+                class="lg:w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
+                <img src="./images/caffe.svg" alt="">
+                <div class="h-[90px]">
+                  <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Cafe Shop</div>
+                  <div class="lg:lg:w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">
+                    Everything you
+                    need to run your business digitally.</div>
+                </div>
+              </div>
+              <div
+                class="lg:w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
+                <img src="./images/shop.svg" alt="">
+                <div class="h-[90px]">
+                  <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Super Markets
+                  </div>
+                  <div class="lg:w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Many
+                    advantages
+                    to suit your business.</div>
+                </div>
+              </div>
+              <div
+                class="lg:w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
+                <img src="./images/other.svg" alt="">
+                <div class="h-[90px]">
+                  <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Many Other
+                    Stores
+                  </div>
+                  <div class="lg:w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything
+                    you
+                    need to run your business digitally.</div>
+                </div>
+              </div>
+
+            </div>
+            <div class="flex lg:items-start items-center flex-col h-full gap-4 flex-wrap">
+
+              <div
+                class="lg:w-[287px] h-[186px] p-4 bg-white rounded-lg hover:shadow-2xl ease-out duration-300 flex-col justify-center items-center gap-5 inline-flex">
+                <div class="w-11 h-11">
+                  <div class="w-[39.42px] h-[39.42px]">
+                    <div class="w-[39.42px] h-[39.42px]">
+                      <img src="./images/restaurants.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="h-[90px]">
+                  <div class=" text-center text-gray-800 text-xl font-medium capitalize leading-[30px]">restaurants
+                  </div>
+                  <div class="w-[255px] text-center text-slate-500 text-base font-light leading-relaxed">Everything you
+                    need to run your business digitally.</div>
+                </div>
+              </div>
+
+              <div
+                class="lg:w-[287px] w-fit h-[186px] p-4 rounded-lg hover:shadow-2xl ease-out duration-300 flex-col items-center gap-5 inline-flex">
+                <img src="./images/desert.svg" alt="">
+                <div class="h-[90px]">
+                  <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Dessert shop
+                  </div>
+                  <div class="lg:w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything
+                    you
+                    need to run your business digitally.</div>
+                </div>
+              </div>
+              <div
+                class="lg:w-[287px] h-[186px] p-4 rounded-lg  hover:shadow-2xl ease-out duration-300 flex-col items-center gap-5 inline-flex">
+                <img src="./images/stationery.svg" alt="">
+                <div class="h-[90px]">
+                  <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Stationery
+                    store
+                  </div>
+                  <div class="lg:w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything
+                    you
+                    need to run your business digitally.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="w-full flex items-center justify-center">
+            <img src="./images/mobile.png" alt="">
           </div>
         </div>
       </div>
@@ -405,13 +565,72 @@
             Features
           </div>
         </div>
-        <div class="w-[944px] text-center text-gray-800 text-5xl font-semibold leading-[60px] mt-[24px]">So, why choose
-          Queue?</div>
-        <div class=" text-center text-slate-600 text-xl font-light leading-[30px]">We worked on all necessary things to
-          save your time and money.</div>
+        <div class="w-full flex-col items-center flex-wrap">
+          <div class="lg:w-[944px] text-center text-gray-800 text-5xl font-semibold leading-[60px] mt-[24px]">So, why
+            choose
+            Queue?</div>
+          <div class=" text-center text-slate-600 text-xl font-light leading-[30px]">We worked on all necessary things
+            to
+            save your time and money.</div>
+        </div>
       </div>
-      <div class="flex items-center justify-between flex-col gap-2 ">
-        <div class="flex items-center justify-between w-full">
+
+      <!-- small screens slider -->
+      <div id="controls-carousel" class="relative w-full md:hidden block mt-5" data-carousel="static">
+
+        <!-- Carousel wrapper -->
+        <div class="relative h-10  overflow-hidden rounded-lg md:h-96">
+          <!-- Item 1 -->
+          <div
+            class="hidden duration-700 ease-in-out absolute flex items-center gap-3 w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-3"
+            data-carousel-item>
+            <div>
+              <img src="./images/sales_active.svg" alt="">
+            </div>
+            <div class="">
+              sales
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div
+            class="hidden duration-700 ease-in-out absolute flex items-center gap-3 w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-3"
+            data-carousel-item>
+            <div>
+              <img src="./images/sales_active.svg" alt="">
+            </div>
+            <div class="">
+              sales
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div
+            class="hidden duration-700 ease-in-out absolute flex items-center gap-3 w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-3"
+            data-carousel-item>
+            <div>
+              <img src="./images/sales_active.svg" alt="">
+            </div>
+            <div class="">
+              sales
+            </div>
+          </div>
+
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+          class="absolute top-0 end-12 z-30 flex items-center w-[30px] h-[30px] justify-center cursor-pointer group focus:outline-none bg-gray-100 bg-opacity-80 rounded-full"
+          data-carousel-prev>
+          <img src="./images/left.svg" alt="">
+          </span>
+        </button>
+        <button type="button"
+          class="absolute top-0 end-0 bg-main z-30 w flex items-center w-[30px] h-[30px] justify-center rounded-full cursor-pointer group focus:outline-none"
+          data-carousel-next>
+          <img src="./images/right.svg" alt="">
+        </button>
+      </div>
+      <div class="lg:flex items-center justify-between flex-col gap-2 flex-wrap w-full hidden">
+        <div class="flex items-center justify-between flex-col lg:flex-row w-full">
           <div
             class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
             <img class="p-3 rounded-full" src="./images/fet_1.svg" alt="">
@@ -435,7 +654,7 @@
           </div>
 
         </div>
-        <div class="flex items-center justify-between w-full">
+        <div class="flex items-center justify-between flex-col lg:flex-row w-full">
           <div
             class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
             <img class="p-3 rounded-full" src="./images/fet_4.svg" alt="">
@@ -465,7 +684,7 @@
 
     <!-- Pricing Start -->
     <div class="w-full mt-[109px] pb-[100px] flex flex-col items-center gap-[45px]">
-      <div class="w-fit mx-auto flex items-center flex-col">
+      <div class="w-full mx-auto flex items-center flex-col flex-wrap">
         <div
           class="w-fit h-[22px] px-4 py-4 mt-[100px] bg-main rounded-[36px] shadow justify-around items-center gap-0.5 inline-flex text-center">
           <img class="py-1 mr-2" src="./images/pricing.svg" alt="" />
@@ -473,15 +692,16 @@
             Pricing
           </div>
         </div>
-        <div class="w-[944px] text-center text-gray-800 text-5xl font-semibold leading-[60px] mt-[24px]">Flexible
+        <div class="lg:w-[944px] w-full text-center text-gray-800 text-5xl font-semibold leading-[60px] mt-[24px]">
+          Flexible
           pricing plan for your business</div>
         <div class=" text-center text-slate-600 text-xl font-light leading-[30px]">Choose & Manage your package to what
           your business really needs.</div>
       </div>
       <div class="w-full price">
-        <div class="container mx-auto h-[733px] flex flex-row items-center justify-center gap-5">
+        <div class="lg:container w-full mx-auto flex lg:flex-row flex-col items-center justify-center gap-5">
           <div
-            class="w-[365px] h-[733px] p-6 bg-white rounded-[15px] border border-zinc-300 flex flex-col items-center">
+            class="lg:w-[365px] h-[733px] p-3 bg-white rounded-[15px] border border-zinc-300 flex flex-col items-center">
             <div class="w-full h-max flex items-start flex-col justify-between mt-4 gap-3">
               <div class="flex items-center justify-start w-full gap-3">
                 <img class="bg-gray-100 p-2 rounded-[100px]" src="./images/enterprice.svg" alt="">
@@ -512,7 +732,7 @@
 
           </div>
           <div
-            class="w-[365px] h-[733px] p-6 bg-[#1D1D35] rounded-[15px] border border-zinc-300 flex flex-col items-center">
+            class="lg:w-[365px] h-[733px] p-3 bg-[#1D1D35] rounded-[15px] border border-zinc-300 flex flex-col items-center">
             <div class="w-full h-max flex items-start flex-col justify-between mt-4 gap-3">
               <div class="flex items-center justify-start w-full gap-3">
                 <img class="bg-white bg-opacity-5 p-2 rounded-[100px]" src="./images/starter_icon.svg" alt="">
@@ -576,7 +796,7 @@
 
           </div>
           <div
-            class="w-[365px] h-[733px] p-6 bg-white rounded-[15px] border border-zinc-300 flex flex-col items-center">
+            class="lg:w-[365px] h-[733px] p-3 bg-white rounded-[15px] border border-zinc-300 flex flex-col items-center">
             <div class="w-full h-max flex items-start flex-col justify-between mt-4 gap-3">
               <div class="flex items-center justify-start w-full gap-3">
                 <img class="bg-white bg-opacity-5 p-2 rounded-[100px]" src="./images/queue_pro.svg" alt="">
@@ -639,11 +859,13 @@
 
         <div id="indicators-carousel" class="relative w-full h-full my-[32px] " data-carousel="static">
           <!-- Carousel wrapper -->
-          <div class="relative h-56 overflow-hidden rounded-lg md:h-[32rem] w-full">
+          <div class="relative lg:h-[25rem] h-[30rem] overflow-hidden rounded-lg md:h-[32rem] w-full">
             <!-- Item 1 -->
             <div class="duration-700 ease-in-out flex items-center justify-center flex-col gap-3 mb-3 w-full"
               data-carousel-item="active">
-              <div class="w-[814px] desc text-center text-3xl font-medium leading-[44px] mt-[39px]">Queue dashboard is
+              <div
+                class="lg:w-[814px] desc text-center lg:text-3xl text-lg font-medium lg:leading-[44px] leading-[25px] mt-[39px]">
+                Queue dashboard is
                 something I recommend to every other restaurant owner. I am also impressed with Queue quality after-sale
                 experience, especially their customer support.</div>
               <div class="w-[88px] h-[88px] mt-[60px]">
@@ -672,25 +894,28 @@
               data-carousel-slide-to="2"></button>
           </div>
           <!-- Slider controls -->
-          <button type="button" disabled
-            class=" disabled:opacity-75 absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-prev>
-            <span
-              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-              <img src="./images/Icon_inactive.svg" alt="">
-              <span class="sr-only">Previous</span>
-            </span>
-          </button>
+          <div class="flex justify-between lg:flex-row-reverse flex-row absolute -bottom-[112px] sm:start-[59%] start-[65%] md:start-[57%]">
 
-          <button type="button"
-            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-next>
-            <span
-              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-main  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
-              <img src="./images/arrow_active.svg" class="text-white" alt="">
-              <span class="sr-only">Next</span>
-            </span>
-          </button>
+            <button type="button" disabled
+              class=" disabled:opacity-75 absolute lg:top-0  bottom-0 lg:start-0 end-12 z-30 flex items-center justify-center lg:h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-prev>
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                <img src="./images/Icon_inactive.svg" alt="">
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+
+            <button type="button"
+              class="absolute lg:top-0 bottom-0 end-0 z-30 flex items-center justify-center lg:h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-next>
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-main  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
+                <img src="./images/arrow_active.svg" class="text-white" alt="">
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -700,38 +925,30 @@
       <img src="./images/devider.svg" class="mt-[80px]" alt="">
     </div>
     <!-- cases study Start -->
-    <div class="w-[1135px] mx-auto pt-5 mb-5">
-      <div class="w-full flex-col justify-center items-center gap-[60px] flex">
+    <div class="lg:w-[1135px] mx-auto pt-5 mb-5">
+      <div class="lg:w-full flex-col justify-center items-center gap-[60px] flex">
 
         <div class="flex justify-between items-end gap-5 w-full">
-          <div class="w-[769px] h-[94px] flex items-start justify-between flex-col">
-            <div class="w-[601px] h-12 text-gray-800 text-4xl font-semibold  leading-[60px]">Partners cases study</div>
-            <div class="w-[769px] text-slate-600 text-xl font-light  leading-[30px]">Get to know our customers' success
+          <div
+            class="lg:w-[769px] w-full lg:h-[94px] flex lg:items-start items-center  lg:justify-between justify-center col flex-row flex-wrap px-3 gap-3 lg:px-0">
+            <div class="lg:w-[601px] lg:h-12 text-gray-800 text-4xl font-semibold text-center leading-[60px]">Partners
+              cases study</div>
+            <div class="lg:w-[769px] text-slate-600 text-xl font-light lg:leading-[30px] text-center lg:text-start">Get
+              to know our customers'
+              success
               stories and their experience with Queue.</div>
           </div>
           <button
-            class="w-[183px] h-14bg-white py-3 rounded-[100px] border border-gray-300 justify-center items-center flex">
+            class="w-[183px] h-14bg-white py-3 rounded-[100px] border border-gray-300 justify-center items-center lg:flex hidden">
             View More Cases
           </button>
         </div>
 
-        <div class="flex items-center justify-around gap3 w-full">
+        <div class="flex items-center justify-around flex-col lg:flex-row gap3 w-full flex-wrap">
 
           <div class="w-[358px] h-[452px] flex-col justify-center items-start gap-4 inline-flex">
             <div
               class="w-[358px] h-60 bg-gradient-to-b from-black card-1 via-black to-black rounded-md flex-col justify-start items-start flex">
-              <!-- <div class="w-[261.99px] h-[86.96px]">
-                   
-                    <div class="w-[183.01px] h-[61.23px] left-[7.36px] top-[14px] absolute bg-green-400 rounded-[100px]"></div>
-                    <div class="w-[197.72px] h-[61.23px] left-0 top-[10px] absolute bg-gray-800 rounded-[100px]"></div>
-                    <div class="w-[129px] h-[29.88px] left-[34.36px] top-[25.67px] absolute">
-                        <div class="left-[4px] top-0 absolute text-white text-base font-medium  leading-[10px]">Ahmed Khalifa</div>
-                        <div class="left-0 top-[19.88px] absolute text-white text-[11px] font-light  leading-[10px]">Mcdonald’s Kuwait CEO</div>
-                    </div>
-                    <div class="w-[82.67px] h-[79.21px]">
-                    </div>
-                </div> -->
-
             </div>
             <div class="self-stretch h-[196px] flex-col justify-start items-start gap-4 inline-flex">
               <div class="self-stretch h-[156px] flex-col justify-start items-start gap-3 flex">
@@ -756,18 +973,6 @@
           <div class="w-[358px] h-[452px] flex-col justify-center items-start gap-4 inline-flex">
             <div
               class="w-[358px] h-60 bg-gradient-to-b card-2 from-black via-black to-black rounded-md flex-col justify-start items-start flex">
-              <!-- <div class="w-[261.99px] h-[86.96px]">
-                   
-                    <div class="w-[183.01px] h-[61.23px] left-[7.36px] top-[14px] absolute bg-green-400 rounded-[100px]"></div>
-                    <div class="w-[197.72px] h-[61.23px] left-0 top-[10px] absolute bg-gray-800 rounded-[100px]"></div>
-                    <div class="w-[129px] h-[29.88px] left-[34.36px] top-[25.67px] absolute">
-                        <div class="left-[4px] top-0 absolute text-white text-base font-medium  leading-[10px]">Ahmed Khalifa</div>
-                        <div class="left-0 top-[19.88px] absolute text-white text-[11px] font-light  leading-[10px]">Mcdonald’s Kuwait CEO</div>
-                    </div>
-                    <div class="w-[82.67px] h-[79.21px]">
-                    </div>
-                </div> -->
-
             </div>
             <div class="self-stretch h-[196px] flex-col justify-start items-start gap-4 inline-flex">
               <div class="self-stretch h-[156px] flex-col justify-start items-start gap-3 flex">
@@ -792,18 +997,6 @@
           <div class="w-[358px] h-[452px] flex-col justify-center items-start gap-4 inline-flex">
             <div
               class="w-[358px] h-60 bg-gradient-to-b card-3 from-black via-black to-black rounded-md flex-col justify-start items-start flex">
-              <!-- <div class="w-[261.99px] h-[86.96px]">
-                   
-                    <div class="w-[183.01px] h-[61.23px] left-[7.36px] top-[14px] absolute bg-green-400 rounded-[100px]"></div>
-                    <div class="w-[197.72px] h-[61.23px] left-0 top-[10px] absolute bg-gray-800 rounded-[100px]"></div>
-                    <div class="w-[129px] h-[29.88px] left-[34.36px] top-[25.67px] absolute">
-                        <div class="left-[4px] top-0 absolute text-white text-base font-medium  leading-[10px]">Ahmed Khalifa</div>
-                        <div class="left-0 top-[19.88px] absolute text-white text-[11px] font-light  leading-[10px]">Mcdonald’s Kuwait CEO</div>
-                    </div>
-                    <div class="w-[82.67px] h-[79.21px]">
-                    </div>
-                </div> -->
-
             </div>
             <div class="self-stretch h-[196px] flex-col justify-start items-start gap-4 inline-flex">
               <div class="self-stretch h-[156px] flex-col justify-start items-start gap-3 flex">
@@ -827,6 +1020,10 @@
           </div>
 
         </div>
+        <button
+          class="w-[183px] h-14bg-white py-3 rounded-[100px] border border-gray-300 justify-center items-center flex lg:hidden">
+          View More Cases
+        </button>
       </div>
 
     </div>
@@ -844,19 +1041,22 @@
               <div class="text-white text-base font-medium  leading-[18px]">FAQ</div>
             </div>
             <div class="h-[114px]">
-              <div class="w-[768px] text-center text-gray-800 text-5xl font-semibold  leading-[57.60px]">What the FAQ ?
+              <div class="lg:w-[768px] text-center text-gray-800 text-5xl font-semibold  leading-[57.60px]">What the FAQ
+                ?
               </div>
             </div>
-            <div class="w-[659px] text-center text-slate-600 text-lg font-light  leading-[27px]">Most frequently asked
+            <div class="lg:w-[659px] text-center text-slate-600 text-lg font-light  leading-[27px]">Most frequently
+              asked
               questions can be found here, explore more questions if there is more.</div>
           </div>
 
-          <div class="w-[936px] flex-col justify-start items-start gap-8 flex">
+          <div class="lg:w-[936px] w-full flex-col lg:justify-start lg:items-start items-center gap-8 flex">
 
             <details
-              class="group w-full px-6 py-5 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
+              class="group lg:w-full w-[98%] md:w-[90%] px-6 lg:py-5 py-3 px-6 lg:py-5 py-3 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
               <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
-                <span> Is Queue an app ?</span>
+                <span class="text-sm font-medium leading-[21px] lg:text-lg lg:font-medium leading-[27px]"> Is Queue an
+                  app ?</span>
                 <span class="transition group-open:rotate-180">
                   <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
                     stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
@@ -873,9 +1073,10 @@
             </details>
 
             <details
-              class="group w-full px-6 py-5 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
+              class="group lg:w-full w-[98%] md:w-[90%] lg:px-6 px-2 lg:py-5 py-3 lg:py-5 py-3 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
               <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
-                <span> Which countries is Queue available in ?</span>
+                <span class="text-sm font-medium leading-[21px] lg:text-lg lg:font-medium leading-[27px]" lg:text-lg
+                  font-medium> Which countries is Queue available in ?</span>
                 <span class="transition group-open:rotate-180">
                   <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
                     stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
@@ -892,9 +1093,10 @@
             </details>
 
             <details
-              class="group w-full px-6 py-5 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
+              class="group lg:w-full w-[98%] md:w-[90%] lg:px-6 px-2 lg:py-5 py-3  lg:py-5 py-3 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
               <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
-                <span> Is Queue suitable for small businesses ?</span>
+                <span class="text-sm font-medium leading-[21px] lg:text-lg lg:font-medium leading-[27px]" lg:text-lg
+                  font-medium> Is Queue suitable for small businesses ?</span>
                 <span class="transition group-open:rotate-180">
                   <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
                     stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
@@ -911,9 +1113,10 @@
             </details>
 
             <details
-              class="group w-full px-6 py-5 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
+              class="group lg:w-full w-[98%] md:w-[90%] lg:px-6 px-2 lg:py-5 py-3  lg:py-5 py-3 bg-white rounded-lg border border-gray-800 lg:justify-center justify-between items-center inline-flex">
               <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
-                <span> How long do you provide support ?</span>
+                <span class="text-sm font-medium leading-[21px] lg:text-lg lg:font-medium leading-[27px]" lg:text-lg
+                  font-medium> How long do you provide support ?</span>
                 <span class="transition group-open:rotate-180">
                   <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
                     stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
@@ -929,9 +1132,10 @@
               </p>
             </details>
             <details
-              class="group w-full px-6 py-5 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
+              class="group lg:w-full w-[98%] md:w-[90%] lg:px-6 px-2 lg:py-5 py-3  lg:py-5 py-3 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
               <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
-                <span> Can I try it before I subscribe and pay ?</span>
+                <span class="text-sm font-medium leading-[21px] lg:text-lg lg:font-medium leading-[27px]" lg:text-lg
+                  font-medium> Can I try it before I subscribe and pay ?</span>
                 <span class="transition group-open:rotate-180">
                   <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
                     stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
@@ -960,13 +1164,15 @@
     <!-- ready Start -->
     <div class="w-full mt-[106px]">
       <div class="container mx-auto flex flex-col items-center ">
-        <div class="h-[226px] flex flex-col items-center justify-between ready py-5">
-          <div class="w-[529px] h-[53px] text-center text-gray-800 text-5xl font-bold leading-[44px]">Ready to get
+        <div class="flex flex-col items-center justify-between gap-5 ready py-5">
+          <div class="lg:w-[529px] lh:h-[53px] text-center text-gray-800 text-5xl font-bold leading-[44px]">Ready to get
             started</div>
-          <div class="w-[503px] text-center text-slate-600 text-lg font-light  leading-[30px]"> Let's come together and
+          <div class="lg:w-[503px] text-center text-slate-600 text-lg font-light  leading-[30px]"> Let's come together
+            and
             showcase how we can attain growth your business.</div>
-          <div class="w-full md:w-[313px] h-11 flex items-center justify-center gap-3">
-            <button class="w-[148px] h-11 px-5 py-2 bg-green-400 rounded-[100px] justify-center items-center gap-2 inline-flex">
+          <div class="w-full md:w-[313px] h-11 flex items-center justify-center gap-3 lg:mt-3">
+            <button
+              class="w-[148px] h-11 px-5 py-2 bg-green-400 rounded-[100px] justify-center items-center gap-2 inline-flex">
               Book a Demo
             </button>
             <button
@@ -981,101 +1187,69 @@
       </div>
     </div>
     <!-- ready End -->
-    
-    
+
+
     <!-- footer Start -->
-    <div class="w-full bg-[#343E55] relative py-14 ">
-      <div class="flex items-center justify-around z-50 my-5">
-        <div class="w-[544.28px] text-white text-4xl font-medium leading-[47px]">
+    <div class="w-full bg-[#343E55] relative py-14 flex items-center justify-around lg:flex-col flex-row flex-wrap">
+      <div class="z-50 my-5">
+        <div class="lg:w-[544.28px] text-white lg:text-start text-center text-4xl font-medium lg:leading-[47px]">
           Subscribe to our newsletter to stay in touch.
         </div>
-        <div class="flex items-center flex-col">
-          <div class="h-[60px] text-white text-xl font-light leading-[30px] tracking-tight">Sign up to receive updates and feature releases to your email.<br/></div>
+        <div class="flex items-center flex-col justify-between">
+          <div class="h-[60px] lg:text-start text-center text-white text-xl font-light leading-[30px] tracking-tight">
+            Sign up to receive updates and feature releases to your email.<br /></div>
 
-          <div class="w-[456px] h-14 pl-6 pr-2 py-2 bg-zinc-100 bg-opacity-10 rounded-[100px] justify-center items-center gap-[94px] inline-flex">
-            <div class="w-[204px] text-white text-base font-light leading-normal">Enter your email</div>
-            <div class="w-[126px] px-[23px] py-2 bg-green-400 rounded-[100px] shadow justify-center items-center gap-2 flex">
-                <div class="text-green-50 text-base font-medium leading-normal">Subscribe</div>
+          <div
+            class="md:w-[456px] h-14 pl-6 pr-2 py-2 bg-zinc-100 bg-opacity-10 rounded-[100px] lg:justify-center justify-between items-center gap-[94px] inline-flex flex-wrap">
+            <div class="lg:w-[204px] text-white text-base font-light leading-normal">Enter your email</div>
+            <div
+              class="lg:w-[126px] px-[23px] py-2 bg-green-400 rounded-[100px] shadow justify-center items-center gap-2 flex">
+              <div class="text-green-50 text-base font-medium leading-normal">Subscribe</div>
             </div>
-        </div>
+          </div>
         </div>
       </div>
-      <div class="w-full h-[221px] px-[151px] py-[45px] flex-col justify-start items-start gap-[45px] inline-flex">
-        <div class="self-stretch justify-center items-center gap-8 inline-flex">
-            <div class="grow shrink basis-0 flex-col justify-start items-start gap-6 inline-flex">
-                <img class="w-[106px] h-8 relative" src="./images/logo.png" />
+      <div class="w-full lg:h-[221px] px-[151px] py-[45px] flex-col justify-start items-start gap-[45px] inline-flex">
+        <div class="self-stretch justify-center items-center gap-8 inline-flex lg:flex-row flex-col">
+          <div class="grow shrink basis-0 flex-col justify-start items-start gap-6 inline-flex">
+            <img class="w-[106px] h-8 relative" src="./images/logo.png" />
+          </div>
+          <div class="justify-center items-center gap-8 flex lg:flex-row flex-col  flex-wrap text-center">
+            <div class="text-white text-base font-normal leading-normal">Services</div>
+            <div class="text-white text-base font-normal leading-normal">Features</div>
+            <div class="text-white text-base font-normal leading-normal">Pricing</div>
+            <div class="text-white text-base font-normal leading-normal">FAQ’s</div>
+            <div class="text-white text-base font-normal leading-normal">Contact us</div>
+          </div>
+          <div class="grow shrink basis-0 h-6 justify-end items-center gap-3 flex flex-row">
+            <div class="w-6 h-6 relative">
+              <img src="./images/Facebook.svg" alt="">
             </div>
-            <div class="justify-center items-center gap-8 flex">
-                <div class="text-white text-base font-normal leading-normal">Services</div>
-                <div class="text-white text-base font-normal leading-normal">Features</div>
-                <div class="text-white text-base font-normal leading-normal">Pricing</div>
-                <div class="text-white text-base font-normal leading-normal">FAQ’s</div>
-                <div class="text-white text-base font-normal leading-normal">Contact us</div>
+            <div class="w-6 h-6 relative">
+              <img src="./images/Instagram.svg" alt="">
             </div>
-            <div class="grow shrink basis-0 h-6 justify-end items-center gap-3 flex">
-              <div class="w-6 h-6 relative">
-                <img src="./images/Facebook.svg" alt="">
-              </div>
-              <div class="w-6 h-6 relative">
-                <img src="./images/Instagram.svg" alt="">
-              </div>
-              <div class="w-6 h-6 relative">
-                <img src="./images/Twitter.svg" alt="">
-              </div>
-              <div class="w-6 h-6 relative">
-                <img src="./images/LinkedIn.svg" alt="">
-              </div>
+            <div class="w-6 h-6 relative">
+              <img src="./images/Twitter.svg" alt="">
             </div>
+            <div class="w-6 h-6 relative">
+              <img src="./images/LinkedIn.svg" alt="">
+            </div>
+          </div>
         </div>
-        <div class="self-stretch h-[54px] flex-col justify-start items-center gap-8 flex">
-            <div class="self-stretch h-px bg-gray-50 bg-opacity-10"></div>
-            <div class="justify-center items-start gap-6 inline-flex">
-                <div class="text-white text-sm font-normal leading-[21px]">© 2023 Queue. All right reserved</div>
-                <div class="self-stretch justify-start items-start gap-6 inline-flex">
-                    <div class="text-white text-sm font-normal underline leading-[21px]">Privacy Policy</div>
-                    <div class="text-white text-sm font-normal underline leading-[21px]">Terms of Service</div>
-                </div>
-            </div>
+      </div>
+      <div class="lg:h-[54px] lg:justify-start justify-between items-center gap-8 flex flex-wrap lg:flex-col flex-row">
+        <div class="self-stretch h-px bg-gray-50 bg-opacity-10"></div>
+        <div
+          class="w-full lg::justify-center justify-between lg:items-start items-center gap-6 flex lg:flex-row flex-col">
+          <div class="text-white text-sm font-normal leading-[21px]">© 2023 Queue. All right reserved</div>
+          <div class="self-stretch justify-start lg:items-start items-center gap-6 flex lg:flex-row flex-col">
+            <div class="text-white text-sm font-normal underline leading-[21px]">Privacy Policy</div>
+            <div class="text-white text-sm font-normal underline leading-[21px]">Terms of Service</div>
+          </div>
         </div>
+      </div>
     </div>
-      <!-- <div class="w-full bg-[#343E55]  h-[221px] px-[151px] py-[45px] flex-col justify-start items-start gap-[45px] flex z-50">
-        <div class="self-stretch justify-center items-center gap-8 inline-flex">
-            <div class="grow shrink basis-0 flex-col justify-start items-start gap-6 inline-flex">
-                <img class="w-[106px] h-8 relative" src="./images/logo.png" />
-            </div>
-            <div class="justify-center items-center gap-8 flex">
-                <div class="text-white text-base font-normal leading-normal">Services</div>
-                <div class="text-white text-base font-normal leading-normal">Features</div>
-                <div class="text-white text-base font-normal leading-normal">Pricing</div>
-                <div class="text-white text-base font-normal leading-normal">FAQ’s</div>
-                <div class="text-white text-base font-normal leading-normal">Contact us</div>
-            </div>
-            <div class="grow shrink basis-0 h-6 justify-end items-center gap-3 flex">
-                <div class="w-6 h-6 relative">
-                  <img src="./images/Facebook.svg" alt="">
-                </div>
-                <div class="w-6 h-6 relative">
-                  <img src="./images/Instagram.svg" alt="">
-                </div>
-                <div class="w-6 h-6 relative">
-                  <img src="./images/Twitter.svg" alt="">
-                </div>
-                <div class="w-6 h-6 relative">
-                  <img src="./images/LinkedIn.svg" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="self-stretch h-[54px] flex-col justify-start items-center gap-8 flex py-5">
-            <div class="justify-center items-start gap-6 inline-flex">
-                <div class="self-stretch justify-start items-start gap-6 inline-flex">
-                    <div class="text-white text-sm font-normal underline leading-[21px]">Privacy Policy</div>
-                    <div class="text-white text-sm font-normal underline leading-[21px]">Terms of Service</div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    </div>
-    
+
     <!-- footer End -->
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>

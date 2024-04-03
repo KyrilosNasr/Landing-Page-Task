@@ -6,24 +6,27 @@ body {
 }
 
 /* fields Start */
-span.fields {
-    position: relative;
-    display: flex;
-}
-
-
-span.fields::before {
-    position: absolute;
-    content: url('./images/star.svg');
-    top: -49px;
-    left: -60px;
-}
-
-.fields::after {
-    position: absolute;
-    content: url('./images/vector.svg');
-    top: -27px;
-    right: 7px;
+@media (width >= 1200px) {
+    
+    span.fields {
+        position: relative;
+        display: flex;
+    }
+    
+    
+    span.fields::before {
+        position: absolute;
+        content: url('./images/star.svg');
+        top: -49px;
+        left: -60px;
+    }
+    
+    .fields::after {
+        position: absolute;
+        content: url('./images/vector.svg');
+        top: -27px;
+        right: 7px;
+    }
 }
 
 /* fields End*/
@@ -42,30 +45,47 @@ span.fields::before {
 /* features End */
 
 /* pricing Start */
-.price {
-    background-image: url('./images/bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+@media (width >= 1200px) {
+    .price {
+        background-image: url('./images/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 /* pricing End */
 
 
 /*  testimonial Start  */
+@media (width >= 1200px){
+    .desc::before {
+        content: url('./images/up.svg');
+        position: absolute;
+        top: 14px;
+        left: 90px;
+    }
+    
+    .desc::after {
+        content: url('./images/down.svg');
+        position: absolute;
+        bottom: 240px;
+        right: 90px;
+    }
+}
+
 .desc::before {
     content: url('./images/up.svg');
     position: absolute;
-    top: 14px;
-    left: 90px;
+    top: 10px;
+    left: 20px;
 }
 
 .desc::after {
     content: url('./images/down.svg');
     position: absolute;
-    bottom: 240px;
-    right: 90px;
+    bottom: 203px;
+    right: 9px;
 }
-
 /*  testimonial End  */
 
 /*  cases study Start  */
@@ -84,58 +104,63 @@ span.fields::before {
 /*  cases study End  */
 
 /*  faq Start  */
-.faq {
-    position: relative;
-}
-
-.faq::before {
-    position: absolute;
-    content: url('./images/faq1.svg');
-    top: 0;
-    left: 0;
-}
-
-.faq::after {
-    position: absolute;
-    content: url('./images//faq2.svg');
-    bottom: 0;
-    right: 0;
+@media (width >= 1200px){
+    .faq {
+        position: relative;
+    }
+    
+    .faq::before {
+        position: absolute;
+        content: url('./images/faq1.svg');
+        top: 0;
+        left: 0;
+    }
+    
+    .faq::after {
+        position: absolute;
+        content: url('./images//faq2.svg');
+        bottom: 0;
+        right: 0;
+    }
 }
 
 /*  faq End  */
 
 /*  ready Start  */
-
-.ready {
-    position: relative;
+@media (width >= 1200px){
+    .ready {
+        position: relative;
+    }
+    
+    .ready::before {
+        content: url('./images/arrow.svg');
+        position: absolute;
+        top: 25px;
+        left: -70px;
+    }
+    
+    .ipad {
+        position: relative;
+        height: 600px;
+    }
 }
 
-.ready::before {
-    content: url('./images/arrow.svg');
-    position: absolute;
-    top: 25px;
-    left: -70px;
-}
-
-.ipad {
-    position: relative;
-    height: 600px;
-}
-
-.ipad::before {
-    position: absolute;
-    content: url('./images/vector.svg');
-    bottom: 231px;
-    left: -39px;
-    transform: rotateZ(-88deg);
-}
-
-.ipad::after {
-    position: absolute;
-    content: url('./images/star-y.svg');
-    bottom: 249px;
-    right: -45px;
-
+@media (width >= 1200px){
+    .ipad::before {
+        position: absolute;
+        content: url('./images/vector.svg');
+        bottom: 231px;
+        left: -39px;
+        transform: rotateZ(-88deg);
+    }
+    
+    .ipad::after {
+        position: absolute;
+        content: url('./images/star-y.svg');
+        bottom: 249px;
+        right: -45px;
+    
+    }
 }
 
 .ipad img{
