@@ -176,7 +176,7 @@ span.fields {
     }
     .ipad img{
         position: relative;
-        bottom: -66px;
+        bottom: 0;
         left: 0;
     }
 }
