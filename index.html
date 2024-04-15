@@ -5,33 +5,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module">
+    import tailwindcssAriaPlugin from 'https://cdn.jsdelivr.net/npm/tailwindcss-aria-plugin@0.1.6/+esm';
 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-
-  <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
             main: "#4ABB82",
+            textLight: '#333F51',
+            textDark: '#1D1D35',
+            textSemiDark: '#404F65',
+            textLightGray: '#8896AB',
+            tabLight: '#556987',
+            bgGray: '#F3F4F5',
+            rgbaBg: 'rgba(234, 254, 241, 0.30)',
+            tabBG: '#F5F7FA',
+            indicator:'#D5DAE1',
+            border:'rgba(247, 248, 249, 0.10)'
           }
         }
-      }
-    }
-
+      },
+      plugins: [
+        tailwindcssAriaPlugin,
+        // ...
+      ]
+    };
   </script>
+  <!-- Tailwind flowbite  -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
   <!-- alexandria font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet" />
+
+  <!-- Css file import -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="main w-full max-w-full bg-white mx-auto">
     <!-- Nav Start -->
-    <nav
-      class="flex items-center mx-auto justify-around flex-wrap p-5 h-[82px] sticky overflow-hidden w-full top-0 z-10 scroll-smooth lg:max-w-full w-full bg-white z-50">
+    <nav class="flex items-center mx-auto justify-around flex-wrap p-2 h-[82px] sticky overflow-hidden w-full top-0 scroll-smooth lg:max-w-full w-full bg-white z-50">
       <div class="w-full block lg:flex lg:items-center lg:w-auto hidden md:items-center">
         <div class="flex items-center flex-shrink-0 mr-6">
           <img src="./images/logo.png" class="w-[106px]" alt="" />
@@ -57,7 +72,7 @@
       <div class="lg:flex justify-between items-center hidden">
         <div>
           <a href="#"
-            class="hover:text-teal-700 flex items-center mr-6 py-2 border border-transparent rounded-md font-medium text-xs ml-4 md:ml-0">En
+            class="flex items-center mr-6 py-2 border border-transparent rounded-md font-medium text-base ml-4 md:ml-0">En
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="5" viewBox="0 0 11 5" fill="none" class="ml-2">
               <g clip-path="url(#clip0_1_933)">
                 <path
@@ -71,11 +86,11 @@
               </defs>
             </svg></a>
         </div>
-        <div class="flex items-center justify-between">
-          <button class="mr-6 py-2 px-4 hover:text-white hover:bg-main border border-[#D5DAE1] font-bold rounded-full">
+        <div class="flex items-center justify-around">
+          <button class="mr-6 py-2 px-4 hover:text-white hover:bg-main border border-[#D5DAE1] rounded-full">
             Partners Login
           </button>
-          <button class="mr-6 bg-main py-2 px-4 text-white border border-[#D5DAE1] font-bold rounded-full">
+          <button class="mr-6 bg-main py-2 px-4 text-white border border-[#D5DAE1] rounded-full">
             Book a Demo
           </button>
         </div>
@@ -113,60 +128,63 @@
       </div>
     </nav>
     <!-- Nav End -->
-    <div class="lg:block hidden bottom-4 right-4 z-50">
+    <div class="lg:block hidden fixed bottom-4 right-4 z-50">
       <button class="font-bold py-2 px-4 rounded-full">
         <img src="./images/float button.svg" alt="">
       </button>
     </div>
     <!-- header-section start -->
-    <div class="lg:container w-full mx-auto lg:mt-[100px] mt-[50px] flex items-center justify-center">
-      <div class="w-full items-center flex flex-col">
+    <div class="container mx-auto lg:mt-[100px] mt-[20px] flex items-center justify-center">
+      <div class="w-full items-center justify-between flex flex-col gap-5">
         <div
-          class="w-[139px] h-[22px] px-2 py-1 bg-main rounded-[36px] shadow justify-center items-center gap-0.5 inline-flex text-center mb-[24px]">
+          class="w-[139px] h-[22px] px-2 py-1 bg-main rounded-[36px] shadow justify-center items-center gap-0.5 inline-flex text-center">
           <img src="./images/sparkle.svg" alt="" />
           <div class="text-white text-xs py-1 font-medium leading-[18px]">
             Queue Soluation
           </div>
         </div>
         <div
-          class="lg:w-[1007px] w-[50%] mt-[20px] lg:mt-0 text-center text-gray-800 lg:text-[56px] text-3xl lg:font-bold font-semibold lg:leading-[71px] leading-[38px]">
+          class="my-[20px] lg:mt-0 text-center text-textDark lg:text-[56px] text-3xl lg:font-bold font-semibold lg:leading-[67px] leading-[38px]">
           Be online with a dedicated website <br />
           to represent your brand
         </div>
         <div
-          class="lg:w-[715px] w-[50%] lg:mt-0 mt-[20px] text-center text-slate-700 lg:text-xl text-base font-light leading-normal lg:leading-[30px">
+          class="lg:w-[715px] lg:mt-0 text-center text-slate-700 lg:text-xl text-base font-light leading-normal lg:leading-[30px">
           Start working with Queue that can provide everything you need to
           generate sales, drive traffic, connect with your loyal customers.
         </div>
         <div
-          class="lg:w-[377px] w-[50%] lg:h-[50px] mt-[32px] flex items-center lg:flex-row flex-col justify-between gap-3">
-          <button
-            class="w-full h-[50px] px-[30px] py-2 bg-main rounded-[100px] justify-center items-center gap-2 inline-flex text-white">
-            Book a Demo
-          </button>
+          class="md:w-[377px] w-[343px] lg:h-[50px] mt-[32px] flex items-center md:flex-row flex-col justify-between gap-3">
 
-          <button
-            class="h-[50px] w-full px-7 py-2 bg-white rounded-[100px] border border-gray-300 justify-center items-center gap-2 inline-flex text-gray-800 text-lg">
+          <a
+            class=" w-full h-[50px] px-[30px] py-2 bg-main rounded-[100px] justify-center items-center gap-2 inline-flex text-white">
+            Book a Demo
+          </a>
+
+          <a
+            class=" w-full h-[50px] px-7 py-2 bg-white rounded-[100px] border border-gray-300 justify-center items-center gap-2 inline-flex text-gray-800 text-lg">
             Contact Sales
-          </button>
+          </a>
         </div>
       </div>
     </div>
     <!-- header-section end -->
-    <img src="./images/header.jpg" class="w-screen h-[648px] md:block hidden" alt="" />
-    <img src="./images/header-sm.png" class="w-screen lg:h-[648px] h-[300px] block md:hidden" alt="" />
+    <div class="mt-[32px]">
+      <img src="./images/header.jpg" class="md:block hidden w-full" alt="" />
+      <img src="./images/header-sm.png" class="block md:hidden" alt="" />
+    </div>
 
     <!-- partners section Start -->
-    <div class="bg-emerald-50 w-full">
-      <div class="container text-center flex flex-col items-center gap-3 justify-between mx-auto">
-        <h2 class="w-[168px] h-[31px] text-center text-gray-800 text-3xl font-semibold mt-[100px]">
+    <div class="bg-rgbaBg w-full">
+      <div class="container text-center flex flex-col items-center gap-3 justify-between mx-auto py-[100px]">
+        <h2 class="w-[168px] h-[31px] text-center text-gray-800 text-3xl font-semibold">
           Trusted by
         </h2>
         <div class="w-full text-center text-slate-400 text-xl font-light">
           They are not our clients, but partners in success
         </div>
         <div
-          class="flex items-center lg:justify-between justify-around my-6 lg:gap-6 flex-wrap lg:flex-row flex-row-reverse w-full">
+          class="flex items-center lg:justify-between justify-around my-6 lg:gap-y-[32px] flex-wrap lg:flex-row flex-row-reverse w-full">
           <div class="flex lg:flex-row flex-col items-center justify-around lg:w-full w-fit gap-6">
             <div class="w-fit h-[38px]">
               <img src="./images/amazon.svg" alt="" />
@@ -207,63 +225,176 @@
     <!-- partners section End -->
 
     <!-- Services Start -->
-    <div class="lg:container lg:mx-auto lg:relative w-full">
-      <div class="w-full items-center justify-center flex flex-col">
-        <div
-          class="w-fit lg:h-[22px] px-4 py-1 lg:py-4 mt-[100px] bg-main rounded-[36px] shadow justify-around items-center gap-0.5 inline-flex text-center">
+    <div class="lg:container lg:mx-auto lg:relative w-full px-3">
+      <div class="w-full items-center justify-center flex flex-col gap-5">
+        <div class="w-fit lg:h-[22px] px-4 py-1 lg:py-4 mt-[100px] bg-main rounded-[36px] shadow justify-around items-center gap-0.5 inline-flex text-center">
           <img class="py-1 mr-2" src="./images/services.svg" alt="" />
           <div class="text-white text-base font-medium py-1 leading-[18px]">
             Services
           </div>
         </div>
-        <div class="flex items-center flex-col text-center w-fit">
-          <div class="lg:w-[944px] w-300px text-center mt-6 text-gray-800 text-5xl font-semibold leading-[60px] gap-4">
+        <div class="flex items-center flex-col text-center w-fit mb-[66px] ">
+          <div
+            class="lg:w-[944px] w-300px text-center mt-6 text-gray-800 text-5xl font-semibold leading-[60px] gap-4 md:px-[10px]">
             Track your business
             in a new way</div>
           <div class="text-center text-slate-600 text-xl font-light leading-[30px]">Here are some services that help
             your
             business with Queue Soluation.</div>
         </div>
+
+        <!-- slider start -->
         <!-- smaller displays slider -->
-
-
-        <div id="controls-carousel" class="relative w-full md:hidden block mt-5" data-carousel="static">
+        <div id="controls-carousel" class="relative w-full flex-row lg:hidden block mt-5" data-carousel="static">
 
           <!-- Carousel wrapper -->
-          <div class="relative h-10  overflow-hidden rounded-lg md:h-96">
+          <div class="relative h-[45rem] w-full overflow-hidden rounded-lg">
             <!-- Item 1 -->
-            <div
-              class="hidden duration-700 ease-in-out absolute flex items-center gap-3 w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-3"
-              data-carousel-item>
-              <div>
+            <div class="hidden duration-700 ease-in-out absolute flex flex-col items-start justify-between gap-3 w-full -translate-x-1/2 -translate-y-full top-1/2 left-3" data-carousel-item>
+              <div class="flex items-center gap-5">
                 <img src="./images/sales_active.svg" alt="">
+                <div class="">
+                  Sales
+                </div>
               </div>
-              <div class="">
-                sales
+
+              <div class="mt-[65px] flex flex-col-reverse items-start justify-between">
+                <div class="lg:w-[487.19px] lg:h-[465.84px] flex items-start justify-between flex-col gap-3 mx-2">
+                  <div class="lg:w-[483.78px] lg:left-[3px]  text-gray-800 lg:text-[42px] text-3xl font-bold lg:leading-[50.40px]">
+                    Customize
+                    responsive website for ordering.</div>
+                  <div
+                    class="lg:w-[486.19px] lg:h-[123.84px] lg:left-[1px] top-[124px] lg:text-slate-600 text-slate-700 lg:text-xl text-base font-light lg:leading-[30px] leading-normal gap3">
+                    Launch a website that is suitable for all devices, which allows your customers to browse and purchase
+                    your
+                    products using different and diverse payment methods.<br /></div>
+                  <div class="lg:w-[468px] w-full lg:h-[114px] flex flex-col gap-3 items-start justify-between">
+                    <div class="lg:w-[221px] lg:h-[30px] flex items-start ">
+                      <img src="./images/chevron-right-double.svg" alt="">
+                      <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">Responsive website.</div>
+                    </div>
+                    <div class="lg:w-[404px] lg:h-[30px] flex items-start">
+                      <img src="./images/chevron-right-double.svg" alt="">
+                      <div class="left-[26px] text-slate-700 text-xl font-light leading-[30px]">New, trending, and
+                        adjustable
+                        website.</div>
+  
+                    </div>
+                    <div class="lg:w-[468px] lg:h-[30px] flex items-start">
+                      <img src="./images/chevron-right-double.svg" alt="">
+                      <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">comfortable and easy
+                        purchasing experience.</div>
+  
+                    </div>
+                  </div>
+                  <div class="lg:w-[128.54px] lg:h-14 lg:py-4 justify-center items-center flex cursor-pointer">
+                    <a href="#" class="lg:w-[103.54px] text-center text-main text-lg font-medium underline leading-normal">Learn More</a>
+                    <img src="./images/chevron-right.svg" class="w-6 h-6">
+                  </div>
+                </div>
+                <img class="xl:w-[569.15px] w-1/2 lg:h-[445.66px] rounded-[10px]" src="./images/pic.png" />
               </div>
+              
             </div>
 
             <!-- Item 2 -->
-            <div
-              class="hidden duration-700 ease-in-out absolute flex items-center gap-3 w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-3"
-              data-carousel-item>
-              <div>
-                <img src="./images/sales_active.svg" alt="">
+            <div class="hidden duration-700 ease-in-out absolute flex flex-col items-start justify-between gap-3 w-full -translate-x-1/2 -translate-y-full top-1/2 left-3" data-carousel-item>
+              <div class="flex items-center gap-5">
+                <img src="./images/Manage_inactive.svg" alt="">
+                <div class="">
+                  Manage
+                </div>
               </div>
-              <div class="">
-                sales
+
+              <div class="mt-[65px] flex flex-col-reverse items-start justify-between">
+                <div class="lg:w-[487.19px] lg:h-[465.84px] flex items-start justify-between flex-col gap-3 mx-2">
+                  <div class="lg:w-[483.78px] lg:left-[3px]  text-gray-800 lg:text-[42px] text-3xl font-bold lg:leading-[50.40px]">
+                    Customize
+                    responsive website for ordering.</div>
+                  <div
+                    class="lg:w-[486.19px] lg:h-[123.84px] lg:left-[1px] top-[124px] lg:text-slate-600 text-slate-700 lg:text-xl text-base font-light lg:leading-[30px] leading-normal gap3">
+                    Launch a website that is suitable for all devices, which allows your customers to browse and purchase
+                    your
+                    products using different and diverse payment methods.<br /></div>
+                  <div class="lg:w-[468px] w-full lg:h-[114px] flex flex-col gap-3 items-start justify-between">
+                    <div class="lg:w-[221px] lg:h-[30px] flex items-start ">
+                      <img src="./images/chevron-right-double.svg" alt="">
+                      <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">Responsive website.</div>
+                    </div>
+                    <div class="lg:w-[404px] lg:h-[30px] flex items-start">
+                      <img src="./images/chevron-right-double.svg" alt="">
+                      <div class="left-[26px] text-slate-700 text-xl font-light leading-[30px]">New, trending, and
+                        adjustable
+                        website.</div>
+  
+                    </div>
+                    <div class="lg:w-[468px] lg:h-[30px] flex items-start">
+                      <img src="./images/chevron-right-double.svg" alt="">
+                      <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">comfortable and easy
+                        purchasing experience.</div>
+  
+                    </div>
+                  </div>
+                  <div class="lg:w-[128.54px] lg:h-14 lg:py-4 justify-center items-center flex cursor-pointer">
+                    <a href="#"
+                      class="lg:w-[103.54px] text-center text-main text-lg font-medium underline leading-normal">Learn
+                      More</a>
+                    <img src="./images/chevron-right.svg" class="w-6 h-6">
+                  </div>
+                </div>
+                <img class="xl:w-[569.15px] w-1/2 lg:h-[445.66px] rounded-[10px]" src="./images/pic.png" />
               </div>
+              
             </div>
+            
             <!-- Item 3 -->
-            <div
-              class="hidden duration-700 ease-in-out absolute flex items-center gap-3 w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-3"
-              data-carousel-item>
-              <div>
-                <img src="./images/sales_active.svg" alt="">
+            <div class="hidden duration-700 ease-in-out absolute flex flex-col items-start justify-between gap-3 w-full -translate-x-1/2 -translate-y-full top-1/2 left-3" data-carousel-item>
+              <div class="flex items-center gap-5">
+                <img src="./images/Marketing_inactive.svg" alt="">
+                <div class="">
+                  Reports
+                </div>
               </div>
-              <div class="">
-                sales
+
+              <div class="mt-[65px] flex flex-col-reverse items-start justify-between">
+                <div class="lg:w-[487.19px] lg:h-[465.84px] flex items-start justify-between flex-col gap-3 mx-2">
+                  <div class="lg:w-[483.78px] lg:left-[3px]  text-gray-800 lg:text-[42px] text-3xl font-bold lg:leading-[50.40px]">
+                    Customize
+                    responsive website for ordering.</div>
+                  <div
+                    class="lg:w-[486.19px] lg:h-[123.84px] lg:left-[1px] top-[124px] lg:text-slate-600 text-slate-700 lg:text-xl text-base font-light lg:leading-[30px] leading-normal gap3">
+                    Launch a website that is suitable for all devices, which allows your customers to browse and purchase
+                    your
+                    products using different and diverse payment methods.<br /></div>
+                  <div class="lg:w-[468px] w-full lg:h-[114px] flex flex-col gap-3 items-start justify-between">
+                    <div class="lg:w-[221px] lg:h-[30px] flex items-start ">
+                      <img src="./images/chevron-right-double.svg" alt="">
+                      <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">Responsive website.</div>
+                    </div>
+                    <div class="lg:w-[404px] lg:h-[30px] flex items-start">
+                      <img src="./images/chevron-right-double.svg" alt="">
+                      <div class="left-[26px] text-slate-700 text-xl font-light leading-[30px]">New, trending, and
+                        adjustable
+                        website.</div>
+  
+                    </div>
+                    <div class="lg:w-[468px] lg:h-[30px] flex items-start">
+                      <img src="./images/chevron-right-double.svg" alt="">
+                      <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">comfortable and easy
+                        purchasing experience.</div>
+  
+                    </div>
+                  </div>
+                  <div class="lg:w-[128.54px] lg:h-14 lg:py-4 justify-center items-center flex cursor-pointer">
+                    <a href="#"
+                      class="lg:w-[103.54px] text-center text-main text-lg font-medium underline leading-normal">Learn
+                      More</a>
+                    <img src="./images/chevron-right.svg" class="w-6 h-6">
+                  </div>
+                </div>
+                <img class="xl:w-[569.15px] w-1/2 lg:h-[445.66px] rounded-[10px]" src="./images/pic.png" />
               </div>
+              
             </div>
 
           </div>
@@ -275,92 +406,231 @@
             </span>
           </button>
           <button type="button"
-            class="absolute top-0 end-0 bg-main z-30 w flex items-center w-[30px] h-[30px] justify-center rounded-full cursor-pointer group focus:outline-none"
+            class="absolute top-0 end-0 bg-main z-30 flex items-center w-[30px] h-[30px] justify-center rounded-full cursor-pointer group focus:outline-none"
             data-carousel-next>
             <img src="./images/right.svg" alt="">
           </button>
         </div>
+        <!-- slider end -->
 
-        <div
-          class="lg:w-[1005px] w-[1124.26px] mx-auto mx-5 h-[82px] lg:p-2.5 bg-slate-100 rounded-[100px] hidden justify-center items-center lg:gap-[45px] gap-3 flex-col lg:flex hidden flex-wrap mt-[66px]">
-          <div class="xl:px-[65px] px-[30px] py-3 bg-white rounded-[87.05px] shadow justify-start items-center gap-[10.32px] flex">
-            <div class="w-6 h-6 ">
-              <div class="w-5 h-[18px] left-0 top-0">
-                <img src="./images/sales_active.svg" alt="sales">
-              </div>
-            </div>
-            <div class="text-gray-800 text-[20.89px] font-normal leading-[37.82px] tracking-tight">Sales</div>
-          </div>
-          <div
-            class="xl:px-[65px] px-[30px] py-3 rounded-[87.05px] hover:bg-white shadow justify-start items-center gap-[10.32px] flex">
-            <div class="w-6 h-6 mt-1">
-              <div class="w-5 h-5 left-0 top-0">
-                <img src="./images/Manage_inactive.svg" alt="">
-              </div>
-            </div>
-            <div class="text-slate-500 text-[20.89px] font-normal leading-[37.82px] tracking-tight">Manage</div>
-          </div>
-          <divx
-            class="xl:px-[65px] px-[30px] py-3 rounded-[87.05px] hover:bg-white shadow justify-start items-center gap-[10.32px] flex">
-            <div class="w-6 h-6 mt-2">
-              <div class="w-[18px] h-5 left-[3px] top-[2px]">
-                <div class="w-[18px] h-5 left-0 top-0">
-                  <img src="./images//reports_inactive.svg" alt="">
+        <!-- Tabs start-->
+     
+        <div class="bg-tabBG dark:border-transparent mb-3 rounded-full py-3 lg:flex items-center flex-row hidden mx-auto">
+
+          <ul class="flex items-center justify-between gap-6 px-5 text-sm font-medium text-center"
+            id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content"
+            data-tabs-active-classes="text-textLightGray hover:text-textDark dark:text-textSemiDark dark:hover:text-textDark border-transparent dark:border-transparent"
+            data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+            role="tablist">
+
+            <li class="lg:px-[65px] py-2 hover:bg-white profile-styled-tab light:bg-transparent ease-linear duration-300 rounded-[87.05px] justify-start items-center gap-[10.32px] flex"
+              role="presentation" id="list-item">
+              <img src="./images/sales_active.svg" alt="sales">
+              <button
+                class="text-tabLight hover:!text-textDark text-[20px]  drak:hover:!text-textDark font-normal leading-[37.82px] tracking-tight"
+                id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab"
+                aria-controls="profile" aria-selected="false">Sales</button>
+            </li>
+
+            <li class="lg:px-[65px] py-2 hover:bg-white ease-linear duration-300 rounded-[87.05px] justify-start items-center gap-[10.32px] flex"
+              role="presentation">
+              <img src="./images/Manage_inactive.svg" alt="">
+              <button
+                class="text-tabLight hover:!text-textDark text-[20px] drak:hover:!text-textDark font-normal leading-[37.82px] tracking-tight"
+                id="dashboard-styled-tab" data-tabs-target="#styled-dashboard" type="button" role="tab"
+                aria-controls="dashboard" aria-selected="false">Manage</button>
+            </li>
+            <li class="lg:px-[65px] py-2 hover:bg-white ease-linear duration-300 rounded-[87.05px] justify-start items-center gap-[10.32px] flex"
+              role="presentation">
+              <img src="./images//reports_inactive.svg" alt="">
+              <button
+                class="text-tabLight hover:!text-textDark text-[20px]  drak:hover:!text-textDark font-normal leading-[37.82px] tracking-tight"
+                id="settings-styled-tab" data-tabs-target="#styled-settings" type="button" role="tab"
+                aria-controls="settings" aria-selected="false">Reports</button>
+            </li>
+            <li class="lg:px-[65px] py-2 hover:bg-white ease-linear duration-300 rounded-[87.05px] justify-start items-center gap-[10.32px] flex"
+              role="presentation">
+              <img src="./images/Marketing_inactive.svg" alt="">
+              <button
+                class="text-tabLight hover:!text-textDark text-[20px]  drak:hover:!text-textDark font-normal leading-[37.82px] tracking-tight"
+                id="contacts-styled-tab" data-tabs-target="#styled-contacts" type="button" role="tab"
+                aria-controls="contacts" aria-selected="false">Contacts</button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tabs Content -->
+        <div class="lg:block hidden" id="default-styled-tab-content">
+          <!-- tab-1 -->
+          <div class="hidden rounded-lg bg-gray-50 dark:bg-transparent" id="styled-profile" role="tabpanel"
+            aria-labelledby="profile-tab">
+            <div class="mt-[65px] flex xl:flex-row flex-col-reverse lg:flex-row items-center justify-between">
+              <div class="lg:w-[487.19px] lg:h-[465.84px] flex items-start justify-between flex-col gap-3 mx-2">
+
+                <div class="lg:w-[483.78px] lg:left-[3px]  text-gray-800 lg:text-[42px] text-3xl font-bold lg:leading-[50.40px]">
+                  Customize
+                  responsive website for ordering.</div>
+                <div
+                  class="lg:w-[486.19px] lg:h-[123.84px] lg:left-[1px] top-[124px] lg:text-slate-600 text-slate-700 lg:text-xl text-base font-light lg:leading-[30px] leading-normal gap3">
+                  Launch a website that is suitable for all devices, which allows your customers to browse and purchase
+                  your
+                  products using different and diverse payment methods.<br /></div>
+                <div class="lg:w-[468px] w-full lg:h-[114px] flex flex-col gap-3 items-start justify-between">
+                  <div class="lg:w-[221px] lg:h-[30px] flex items-start ">
+                    <img src="./images/chevron-right-double.svg" alt="">
+                    <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">Responsive website.</div>
+                  </div>
+                  <div class="lg:w-[404px] lg:h-[30px] flex items-start">
+                    <img src="./images/chevron-right-double.svg" alt="">
+                    <div class="left-[26px] text-slate-700 text-xl font-light leading-[30px]">New, trending, and
+                      adjustable
+                      website.</div>
+
+                  </div>
+                  <div class="lg:w-[468px] lg:h-[30px] flex items-start">
+                    <img src="./images/chevron-right-double.svg" alt="">
+                    <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">comfortable and easy
+                      purchasing experience.</div>
+
+                  </div>
+                </div>
+                <div class="lg:w-[128.54px] lg:h-14 lg:py-4 justify-center items-center flex cursor-pointer">
+                  <a href="#"
+                    class="lg:w-[103.54px] text-center text-main text-lg font-medium underline leading-normal">Learn
+                    More</a>
+                  <img src="./images/chevron-right.svg" class="w-6 h-6">
                 </div>
               </div>
+              <img class="xl:w-[569.15px] w-1/2 lg:h-[445.66px] rounded-[10px]" src="./images/pic.png" />
             </div>
-            <div class="text-slate-500 text-[20.89px] font-normal leading-[37.82px] tracking-tight">Reports</div>
-          </divx>
-          <div
-            class="xl:px-[65px] px-[30px] py-3 rounded-[87.05px] hover:bg-white shadow justify-start items-center gap-[10.32px] flex">
-            <div class="w-6 h-6 mt-1">
-              <div class="w-[18.52px] h-5 left-[2.71px] top-[1.98px]">
-                <div class="w-[18.52px] h-[15.41px] left-0 top-0">
-                  <img src="./images/Marketing_inactive.svg" alt="">
+          </div>
+          <!-- tab-2 -->
+          <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-transparent" id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+            <div class="mt-[65px] flex xl:flex-row flex-col-reverse lg:flex-row items-center justify-between">
+              <div class="lg:w-[487.19px] lg:h-[465.84px] flex items-start justify-between flex-col flex-wrap gap-3 mx-2">
+
+                <div class="lg:w-[483.78px] lg:left-[3px]  text-gray-800 lg:text-[42px] text-3xl font-bold lg:leading-[50.40px]">
+                  Customize
+                  responsive website for ordering.</div>
+                <div class="lg:w-[486.19px] lg:h-[123.84px] lg:text-slate-600 text-slate-700 lg:text-xl text-base font-light lg:leading-[30px] leading-normal gap3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quod blanditiis dolorum dolor exercitationem? Hic tenetur autem eius commodi beatae laboriosam.
+                  </div>
+                <div class="lg:w-[468px] w-full lg:h-[114px] flex flex-col gap-3 items-start justify-between">
+                  <div class="lg:w-[221px] lg:h-[30px] flex items-start ">
+                    <img src="./images/chevron-right-double.svg" alt="">
+                    <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">Responsive website.</div>
+                  </div>
+                  <div class="lg:w-[404px] lg:h-[30px] flex items-start">
+                    <img src="./images/chevron-right-double.svg" alt="">
+                    <div class="left-[26px] text-slate-700 text-xl font-light leading-[30px]">New, trending, and
+                      adjustable
+                      website.</div>
+
+                  </div>
+                  <div class="lg:w-[468px] lg:h-[30px] flex items-start">
+                    <img src="./images/chevron-right-double.svg" alt="">
+                    <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">comfortable and easy
+                      purchasing experience.</div>
+
+                  </div>
+                </div>
+                <div class="lg:w-[128.54px] lg:h-14 lg:py-4 justify-center items-center flex cursor-pointer">
+                  <a href="#"
+                    class="lg:w-[103.54px] text-center text-main text-lg font-medium underline leading-normal">Learn
+                    More</a>
+                  <img src="./images/chevron-right.svg" class="w-6 h-6">
                 </div>
               </div>
-            </div>
-            <div class="text-slate-500 text-[20.89px] font-normal leading-[37.82px] tracking-tight">Marketing</div>
-          </div>
-        </div>
-        <div
-          class="lg:w-[1155.85px] lg:h-[465.84px] mt-[65px] gap-3 flex xl:flex-row flex-col-reverse lg:flex-row items-center items-start justify-between flex-wrap">
-          <div class="lg:w-[487.19px] lg:h-[465.84px] flex items-start justify-between flex-col flex-wrap gap-3 mx-2">
-
-            <div
-              class="lg:w-[483.78px] lg:left-[3px]  text-gray-800 lg:text-[42px] text-3xl font-bold lg:leading-[50.40px]">
-              Customize
-              responsive website for ordering.</div>
-            <div
-              class="lg:w-[486.19px] lg:h-[123.84px] lg:left-[1px] top-[124px] lg:text-slate-600 text-slate-700 lg:text-xl text-base font-light lg:leading-[30px] leading-normal gap3">
-              Launch a website that is suitable for all devices, which allows your customers to browse and purchase your
-              products using different and diverse payment methods.<br /></div>
-            <div class="lg:w-[468px] w-full lg:h-[114px] flex flex-col gap-3 items-start justify-between">
-              <div class="lg:w-[221px] lg:h-[30px] flex items-start ">
-                <img src="./images/chevron-right-double.svg" alt="">
-                <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">Responsive website.</div>
-              </div>
-              <div class="lg:w-[404px] lg:h-[30px] flex items-start">
-                <img src="./images/chevron-right-double.svg" alt="">
-                <div class="left-[26px] text-slate-700 text-xl font-light leading-[30px]">New, trending, and adjustable
-                  website.</div>
-
-              </div>
-              <div class="lg:w-[468px] lg:h-[30px] flex items-start">
-                <img src="./images/chevron-right-double.svg" alt="">
-                <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">comfortable and easy
-                  purchasing experience.</div>
-
-              </div>
-            </div>
-            <div class="lg:w-[128.54px] lg:h-14 lg:py-4 justify-center items-center flex">
-              <div class="lg:w-[103.54px] text-center text-green-400 text-lg font-medium underline leading-normal">Learn
-                More</div>
-              <img src="./images/chevron-right.svg" class="w-6 h-6">
+              <img class="xl:w-[569.15px] w-1/2 lg:h-[445.66px] rounded-[10px]" src="./images/pic.png" />
             </div>
           </div>
-          <img class="lg:w-[569.15px] w-[340px] lg:h-[445.66px] rounded-[10px]" src="./images/pic.png" />
+         <!-- tab-3 -->
+          <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-transparent ease-linear duration-300" id="styled-settings"
+            role="tabpanel" aria-labelledby="settings-tab">
+            <div class="mt-[65px] flex xl:flex-row flex-col-reverse lg:flex-row items-center justify-between">
+              <div class="lg:w-[487.19px] lg:h-[465.84px] flex items-start justify-between flex-col gap-3 mx-2">
+
+                <div
+                  class="lg:w-[483.78px] lg:left-[3px]  text-gray-800 lg:text-[42px] text-3xl font-bold lg:leading-[50.40px]">
+                  Customize
+                  responsive website for ordering.</div>
+                <div
+                  class="lg:w-[486.19px] lg:h-[123.84px] lg:left-[1px] top-[124px] lg:text-slate-600 text-slate-700 lg:text-xl text-base font-light lg:leading-[30px] leading-normal gap3">
+                  Launch a website that is suitable for all devices, which allows your customers to browse and purchase
+                  your
+                  products using different and diverse payment methods.<br /></div>
+                <div class="lg:w-[468px] w-full lg:h-[114px] flex flex-col gap-3 items-start justify-between">
+                  <div class="lg:w-[221px] lg:h-[30px] flex items-start ">
+                    <img src="./images/chevron-right-double.svg" alt="">
+                    <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">Responsive website.</div>
+                  </div>
+                  <div class="lg:w-[404px] lg:h-[30px] flex items-start">
+                    <img src="./images/chevron-right-double.svg" alt="">
+                    <div class="left-[26px] text-slate-700 text-xl font-light leading-[30px]">New, trending, and
+                      adjustable
+                      website.</div>
+
+                  </div>
+                  <div class="lg:w-[468px] lg:h-[30px] flex items-start">
+                    <img src="./images/chevron-right-double.svg" alt="">
+                    <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">comfortable and easy
+                      purchasing experience.</div>
+
+                  </div>
+                </div>
+                <div class="lg:w-[128.54px] lg:h-14 lg:py-4 justify-center items-center flex cursor-pointer">
+                  <a href="#"
+                    class="lg:w-[103.54px] text-center text-main text-lg font-medium underline leading-normal">Learn
+                    More</a>
+                  <img src="./images/chevron-right.svg" class="w-6 h-6">
+                </div>
+              </div>
+              <img class="xl:w-[569.15px] w-1/2 lg:h-[445.66px] rounded-[10px]" src="./images/pic.png" />
+            </div>
+          </div>
+            <!-- tab-4 -->
+          <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-transparent" id="styled-contacts" role="tabpanel"
+            aria-labelledby="contacts-tab">
+            <div class="mt-[65px] flex xl:flex-row flex-col-reverse lg:flex-row items-center justify-between">
+              <div class="lg:w-[487.19px] lg:h-[465.84px] flex items-start justify-between flex-col flex-wrap gap-3 mx-2">
+
+                <div class="lg:w-[483.78px] lg:left-[3px]  text-gray-800 lg:text-[42px] text-3xl font-bold lg:leading-[50.40px]">
+                  Customize
+                  responsive website for ordering.</div>
+                <div class="lg:w-[486.19px] lg:h-[123.84px] lg:text-slate-600 text-slate-700 lg:text-xl text-base font-light lg:leading-[30px] leading-normal gap3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quod blanditiis dolorum dolor exercitationem? Hic tenetur autem eius commodi beatae laboriosam.
+                  </div>
+                <div class="lg:w-[468px] w-full lg:h-[114px] flex flex-col gap-3 items-start justify-between">
+                  <div class="lg:w-[221px] lg:h-[30px] flex items-start ">
+                    <img src="./images/chevron-right-double.svg" alt="">
+                    <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">Responsive website.</div>
+                  </div>
+                  <div class="lg:w-[404px] lg:h-[30px] flex items-start">
+                    <img src="./images/chevron-right-double.svg" alt="">
+                    <div class="left-[26px] text-slate-700 text-xl font-light leading-[30px]">New, trending, and
+                      adjustable
+                      website.</div>
+
+                  </div>
+                  <div class="lg:w-[468px] lg:h-[30px] flex items-start">
+                    <img src="./images/chevron-right-double.svg" alt="">
+                    <div class="left-[26px]  text-slate-700 text-xl font-light leading-[30px]">comfortable and easy
+                      purchasing experience.</div>
+
+                  </div>
+                </div>
+                <div class="lg:w-[128.54px] lg:h-14 lg:py-4 justify-center items-center flex cursor-pointer">
+                  <a href="#"
+                    class="lg:w-[103.54px] text-center text-main text-lg font-medium underline leading-normal">Learn
+                    More</a>
+                  <img src="./images/chevron-right.svg" class="w-6 h-6">
+                </div>
+              </div>
+              <img class="xl:w-[569.15px] w-1/2 lg:h-[445.66px] rounded-[10px]" src="./images/pic.png" />
+            </div>
+          </div>
         </div>
+        <!-- Tabs start-->
       </div>
     </div>
     <!-- Services End -->
@@ -381,7 +651,7 @@
           </div>
         </div>
 
-        <div class="lg:flex hidden items-center justify-between w-full mt-[72px]">
+        <div class="lg:flex hidden items-center justify-around w-full mt-[72px]">
           <div class="flex items-start flex-col h-full gap-4">
             <div
               class="lg:w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
@@ -396,7 +666,7 @@
             <div
               class="lg:w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
               <img src="./images/shop.svg" alt="">
-              <div class="h-[90px]">
+              <div class="h-[90px] w-[120px]">
                 <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Super Markets
                 </div>
                 <div class="lg:w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Many
@@ -441,7 +711,7 @@
             <div
               class="lg:w-[287px] h-[186px] p-4 rounded-lg hover:shadow-2xl ease-out duration-300 flex-col items-center gap-5 inline-flex">
               <img src="./images/desert.svg" alt="">
-              <div class="h-[90px]">
+              <div class="lg:h-[90px]">
                 <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Dessert shop
                 </div>
                 <div class="lg:w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything
@@ -465,12 +735,12 @@
         </div>
 
         <div class="md:flex flex-col lg:hidden items-center justify-between w-full mt-[72px] gap-4">
-          <div class="flex flex-row items-center justify-around w-full flex-wrap">
-            <div class="flex lg:items-start items-center flex-col h-full gap-4 flex-wrap">
+          <div class="flex   items-center justify-around w-full flex-wrap w-full mb-8">
+            <div class="flex lg:items-start items-center flex-col gap-4 flex-wrap w-[40%]">
               <div
-                class="lg:w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
+                class="lg:w-[287px] lg:h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 flex">
                 <img src="./images/caffe.svg" alt="">
-                <div class="h-[90px]">
+                <div class="lg:h-[90px] w-[120px]">
                   <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Cafe Shop</div>
                   <div class="lg:lg:w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">
                     Everything you
@@ -478,9 +748,9 @@
                 </div>
               </div>
               <div
-                class="lg:w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
+                class="lg:w-[287px] lg:h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 flex">
                 <img src="./images/shop.svg" alt="">
-                <div class="h-[90px]">
+                <div class="lg:h-[90px] w-[120px]">
                   <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Super Markets
                   </div>
                   <div class="lg:w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Many
@@ -489,9 +759,9 @@
                 </div>
               </div>
               <div
-                class="lg:w-[287px] h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 inline-flex">
+                class="lg:w-[287px] lg:h-[186px] hover:shadow-2xl ease-out duration-300 p-4 rounded-lg flex-col items-center gap-5 flex">
                 <img src="./images/other.svg" alt="">
-                <div class="h-[90px]">
+                <div class="lg:h-[90px] w-[120px]">
                   <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Many Other
                     Stores
                   </div>
@@ -502,29 +772,27 @@
               </div>
 
             </div>
-            <div class="flex lg:items-start items-center flex-col h-full gap-4 flex-wrap">
+            <div class="flex lg:items-start items-center flex-col gap-4 flex-wrap w-[40%]">
 
-              <div
-                class="lg:w-[287px] h-[186px] p-4 bg-white rounded-lg hover:shadow-2xl ease-out duration-300 flex-col justify-center items-center gap-5 inline-flex">
-                <div class="w-11 h-11">
-                  <div class="w-[39.42px] h-[39.42px]">
-                    <div class="w-[39.42px] h-[39.42px]">
+              <div class="lg:w-[287px] lg:h-[186px] p-4 rounded-lg flex-col items-center gap-5 flex">
+                <div class="lg:w-11 h-11">
+                  <div class="lg:w-[39.42px] lg:h-[39.42px]">
+                    <div class="lg:w-[39.42px] lg:h-[39.42px]">
                       <img src="./images/restaurants.svg" alt="">
                     </div>
                   </div>
                 </div>
-                <div class="h-[90px]">
+                <div class="lg:h-[90px] w-[120px]">
                   <div class=" text-center text-gray-800 text-xl font-medium capitalize leading-[30px]">restaurants
                   </div>
-                  <div class="w-[255px] text-center text-slate-500 text-base font-light leading-relaxed">Everything you
+                  <div class="lg:w-[255px] text-center text-slate-500 text-base font-light leading-relaxed">Everything you
                     need to run your business digitally.</div>
                 </div>
               </div>
 
-              <div
-                class="lg:w-[287px] w-fit h-[186px] p-4 rounded-lg hover:shadow-2xl ease-out duration-300 flex-col items-center gap-5 inline-flex">
+              <div class="lg:w-[287px] lg:h-[186px] p-4 rounded-lg flex-col items-center gap-5 flex">
                 <img src="./images/desert.svg" alt="">
-                <div class="h-[90px]">
+                <div class="lg:h-[90px] w-[120px]">
                   <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Dessert shop
                   </div>
                   <div class="lg:w-[255px] text-center text-slate-500 text-base font-light  leading-relaxed">Everything
@@ -532,10 +800,10 @@
                     need to run your business digitally.</div>
                 </div>
               </div>
-              <div
-                class="lg:w-[287px] h-[186px] p-4 rounded-lg  hover:shadow-2xl ease-out duration-300 flex-col items-center gap-5 inline-flex">
+
+              <div class="lg:w-[287px] lg:h-[186px] p-4 rounded-lg flex-col items-center gap-5 flex">
                 <img src="./images/stationery.svg" alt="">
-                <div class="h-[90px]">
+                <div class="lg:h-[90px] w-[120px]">
                   <div class=" text-center text-gray-800 text-xl font-medium  capitalize leading-[30px]">Stationery
                     store
                   </div>
@@ -556,7 +824,7 @@
     <!-- fields End -->
 
     <!-- features Start -->
-    <div class="w-full mt-[109px] pb-[100px] lg:bg-emerald-50 lg:bg-opacity-30 bg-gray-50 flex flex-col items-center gap-[45px]">
+    <div class="w-full mt-[109px] lg:bg-emerald-50 lg:bg-opacity-30 bg-gray-50 flex flex-col items-center gap-[45px]">
       <div class="w-fit mx-auto flex items-center flex-col">
         <div
           class="w-fit h-[22px] px-4 py-4 mt-[100px] bg-main rounded-[36px] shadow justify-around items-center gap-0.5 inline-flex text-center">
@@ -575,50 +843,48 @@
         </div>
       </div>
 
-  
 
-      <div class="lg:flex items-center justify-between flex-col gap-2 flex-wrap w-full hidden">
-        <div class="flex items-center justify-between flex-col lg:flex-row w-full">
-          <div
-            class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
+
+      <div class="container lg:flex items-center justify-between flex-col gap-y-8 flex-wrap hidden">
+        
+        <div class="flex items-center justify-around container mx-auto flex-row">
+
+          <div class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
             <img class="p-3 rounded-full" src="./images/fet_1.svg" alt="">
             <div class="w-[359px] text-center text-2xl font-bold leading-loose">Customize website</div>
             <div class="w-[337px] text-center text-base font-light leading-normal">Stay connected with your team and
               make quick decisions wherever </div>
           </div>
-          <div
-            class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
+          <div class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
             <img class="p-3 rounded-full" src="./images/fet_2.svg" alt="">
-            <div class="w-[359px] text-center text-2xl font-bold leading-loose">Marketing Tools</div>
-            <div class="w-[337px] text-center text-base font-light leading-normal">Stay connected with your team and
+            <div class="text-center text-2xl font-bold leading-loose">Marketing Tools</div>
+            <div class="text-center text-base font-light leading-normal">Stay connected with your team and
               make quick decisions wherever </div>
           </div>
-          <div
-            class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
+          <div class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
             <img class="p-3 rounded-full" src="./images/fet_3.svg" alt="">
-            <div class="w-[359px] text-center text-2xl font-bold leading-loose">Support team</div>
-            <div class="w-[337px] text-center text-base font-light leading-normal">Stay connected with your team and
+            <div class="text-center text-2xl font-bold leading-loose">Support team</div>
+            <div class="text-center text-base font-light leading-normal">Stay connected with your team and
               make quick decisions wherever </div>
           </div>
 
         </div>
-        <div class="flex items-center justify-between flex-col lg:flex-row w-full">
-          <div
-            class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
+
+        <div class="flex items-center justify-around container mx-auto gap-8 flex-row">
+
+          <div class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
             <img class="p-3 rounded-full" src="./images/fet_4.svg" alt="">
-            <div class="w-[359px] text-center text-2xl font-bold leading-loose">Order Management</div>
-            <div class="w-[337px] text-center text-base font-light leading-normal">Stay connected with your team and
+            <div class="text-center text-2xl font-bold leading-loose">Order Management</div>
+            <div class="text-center text-base font-light leading-normal">Stay connected with your team and
               make quick decisions wherever </div>
           </div>
-          <div
-            class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
+          <div class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
             <img class="p-3 rounded-full" src="./images/fet_5.svg" alt="">
-            <div class="w-[359px] text-center text-2xl font-bold leading-loose">Many ways to pay</div>
-            <div class="w-[337px] text-center text-base font-light leading-normal">Stay connected with your team and
+            <div class="text-center text-2xl font-bold leading-loose">Many ways to pay</div>
+            <div class="text-center text-base font-light leading-normal">Stay connected with your team and
               make quick decisions wherever </div>
           </div>
-          <div
-            class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
+          <div class="w-[359px] h-[272px] features-card hover:bg-main hover:text-white ease-in-out duration-[250ms] rounded-lg flex items-center justify-center gap-4 flex-col">
             <img class="p-3 rounded-full" src="./images/fet_6.svg" alt="">
             <div class="w-[359px] text-center text-2xl font-bold leading-loose">No commission</div>
             <div class="w-[337px] text-center text-base font-light leading-normal">Stay connected with your team and
@@ -626,6 +892,7 @@
           </div>
 
         </div>
+
       </div>
 
       <div id="indicators-carousel" class="relative w-full h-full my-[32px] md:block lg:hidden " data-carousel="slide">
@@ -636,7 +903,8 @@
             data-carousel-item="active">
             <img src="./images/fet_1.svg" class="w-[88px] block" alt="...">
             <div class="text-center text-gray-800 text-xl font-semibold leading-loose">Customize website</div>
-            <div class="w-[278.08px] text-center text-gray-800 text-base font-light leading-normal">Stay connected with your team and make quick decisions wherever </div>
+            <div class="w-[278.08px] text-center text-gray-800 text-base font-light leading-normal">Stay connected with
+              your team and make quick decisions wherever </div>
           </div>
           <!-- Item 2 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -647,17 +915,17 @@
             <!-- <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> -->
           </div>
         </div>
-        
+
         <!-- Slider indicators -->
         <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse -bottom-11 left-1/2">
-          <button type="button" class="w-3 h-3 rounded-full dark:!bg-main" aria-current="true" aria-label="Slide 1"
+          <button type="button" class="w-3 h-3 rounded-full aria-current:dark:!bg-main !bg-indicator" aria-current="true" aria-label="Slide 1"
             data-carousel-slide-to="0"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+          <button type="button" class="w-3 h-3 rounded-full aria-current:dark:!bg-main !bg-indicator" aria-current="false" aria-label="Slide 2"
             data-carousel-slide-to="1"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+          <button type="button" class="w-3 h-3 rounded-full aria-current:dark:!bg-main !bg-indicator" aria-current="false" aria-label="Slide 3"
             data-carousel-slide-to="2"></button>
         </div>
-        
+
         <!-- Slider controls -->
         <div class="flex justify-between lg:flex-row-reverse flex-row absolute -bottom-[112px] sm:start-[59%] start-[65%] md:start-[57%]">
 
@@ -682,11 +950,12 @@
           </button>
         </div>
       </div>
+
     </div>
     <!-- features End -->
 
     <!-- Pricing Start -->
-    <div class="w-full mt-[109px] pb-[100px] flex flex-col items-center gap-[45px]">
+    <div class="w-full mt-[109px] pb-[100px] flex flex-col items-center justify-center gap-[45px]">
       <div class="w-full mx-auto flex items-center flex-col flex-wrap">
         <div
           class="w-fit h-[22px] px-4 py-4 mt-[100px] bg-main rounded-[36px] shadow justify-around items-center gap-0.5 inline-flex text-center">
@@ -702,44 +971,41 @@
           your business really needs.</div>
       </div>
       <div class="w-full price">
-        <div class="lg:container w-full mx-auto flex lg:flex-row flex-col items-center justify-center gap-5">
-          <div
-            class="lg:w-[365px] h-[733px] p-3 bg-white rounded-[15px] border border-zinc-300 flex flex-col items-center">
+        <div class="md:container w-full mx-auto flex md:flex-row flex-col items-center justify-center gap-6 flex-wrap">
+
+          <div class="lg:w-[365px] w-[68%] h-[733px]  lg:p-3 bg-white rounded-[15px] border border-zinc-300 flex flex-col items-center justify-between px-5">
             <div class="w-full h-max flex items-start flex-col justify-between mt-4 gap-3">
               <div class="flex items-center justify-start w-full gap-3">
                 <img class="bg-gray-100 p-2 rounded-[100px]" src="./images/enterprice.svg" alt="">
                 <div class="w-[142px] h-7 text-gray-800 text-2xl font-medium leading-[30px] tracking-wide">Enterprise
                 </div>
               </div>
-              <div class="text-gray-800 text-5xl mt-[52px] font-medium leading-[57.60px]">Let’s talk</div>
-              <div class="w-[317px] h-[0px] border border-zinc-300 mt-[10px]"></div>
-              <div class="w-[155px] text-slate-500 text-base font-light leading-tight">Features Included :</div>
+              <div class="text-gray-800 md:text-5xl text-3xl lg:mt-[52px] font-medium leading-[57.60px]">Lets talk</div>
+              <div class="h-[0px] border border-zinc-300 mt-[10px] w-full"></div>
+              <div class="w-[155px] md:text-slate-500 text-tabLight text-base font-light leading-tight">Features Included :</div>
               <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
                 <img src="./images/Check_green.svg" alt="">
-                <div class="text-gray-800 text-base font-light leading-normal">Custom contract and pricing</div>
+                <div class="md:text-gray-800 text-textDark text-base font-light leading-normal">Custom contract and pricing</div>
               </div>
               <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
                 <img src="./images/Check_green.svg" alt="">
-                <div class="text-gray-800 text-base font-light leading-normal">Priority support</div>
+                <div class="md:text-gray-800 text-textDark text-base font-light leading-normal">Priority support</div>
               </div>
               <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
                 <img src="./images/Check_green.svg" alt="">
-                <div class="text-gray-800 text-base font-light leading-normal">Dedicated account manager</div>
+                <div class="md:text-gray-800 text-textDark text-base font-light leading-normal">Dedicated account manager</div>
               </div>
             </div>
-            <div
-              class="w-[317px] h-12 px-7 py-4 mt-auto bg-white rounded-[100px] border border-gray-300 justify-center items-center gap-2 inline-flex">
-              <div class="w-[143px] text-center text-gray-800 text-base font-medium leading-7 tracking-tight">Contact
-                Sales</div>
+            <div class="lg:w-[317px] w-full mb-3 h-12 px-7 py-4 mt-auto rounded-[100px] border border-gray-300 justify-center items-center gap-2 flex">
+              <div class="w-[143px] text-center text-base font-medium leading-7 tracking-tight">Contact Sales</div>
             </div>
-
           </div>
-          <div
-            class="lg:w-[365px] h-[733px] p-3 bg-[#1D1D35] rounded-[15px] border border-zinc-300 flex flex-col items-center">
+
+          <div class="lg:w-[365px] w-[68%] h-[733px] lg:p-3 bg-textDark rounded-[15px] border border-zinc-300 flex flex-col items-center justify-between px-5">
             <div class="w-full h-max flex items-start flex-col justify-between mt-4 gap-3">
               <div class="flex items-center justify-start w-full gap-3">
                 <img class="bg-white bg-opacity-5 p-2 rounded-[100px]" src="./images/starter_icon.svg" alt="">
-                <div class="w-[142px] h-7 text-white text-2xl font-medium leading-[30px] tracking-wide">Starter
+                <div class="md:w-[142px] h-7 text-white text-2xl font-medium leading-[30px] tracking-wide">Starter
                 </div>
                 <button
                   class="w-[120px] h-[22px]  bg-white rounded-[36px] justify-center items-center gap-0.5 inline-flex">
@@ -748,10 +1014,11 @@
               </div>
               <div class="text-center text-white mt-3 text-opacity-80 text-base font-light leading-normal">Starting from
               </div>
-              <div class="w-[276px] h-[62px]"><span class="text-white text-5xl font-medium  leading-[57.60px]">KD
-                  175</span><span class="text-white text-opacity-80 text-xl font-light  leading-relaxed">/per
+              <div class="md:w-[276px] md:h-[62px] w-full flex items-center">
+                <div class="text-white md:text-5xl text-3xl font-medium  leading-[57.60px]">KD
+                  175</div><span class="text-white text-opacity-80 md:text-xl text-sm font-light leading-relaxed mt-2 md:m-0">/per
                   year</span></div>
-              <div class="w-[317px] h-[0px] border border-zinc-300 mt-[10px]"></div>
+              <div class="h-[0px] border border-zinc-300 mt-[10px] w-full"></div>
               <div class="w-[155px] text-white text-base font-light leading-tight">Features Included :</div>
               <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
                 <img src="./images/Check_white.svg" alt="">
@@ -780,36 +1047,34 @@
               <div class="w-[155px] text-white text-base font-light leading-tight">ADD-ONS :</div>
               <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
                 <img src="./images/Check_white.svg" alt="">
-                <div class="text-white text-base font-light leading-normal">Extra Branch – 5 KD</div>
+                <div class="text-white text-base font-light leading-normal">Extra Branch - 5 KD</div>
               </div>
               <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
                 <img src="./images/Check_white.svg" alt="">
-                <div class="text-white text-base font-light leading-normal">Extra User – 5 KD</div>
+                <div class="text-white text-base font-light leading-normal">Extra User - 5 KD</div>
               </div>
               <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
                 <img src="./images/Check_white.svg" alt="">
-                <div class="text-white text-base font-light leading-normal">Extra User – 5 KD</div>
+                <div class="text-white text-base font-light leading-normal">Extra User - 5 KD</div>
               </div>
             </div>
-            <div
-              class="w-[317px] h-12 px-7 py-4 mt-auto bg-gray-800 rounded-[100px] border border-gray-300 justify-center items-center gap-2 inline-flex">
-              <div class="w-[143px] text-center text-white text-base font-medium leading-7 tracking-tight">Contact
-                Sales</div>
+            <div class="lg:w-[317px] w-full mb-3 h-12 px-7 py-4 mt-auto rounded-[100px] border border-gray-300 justify-center items-center gap-2 flex">
+              <div class="w-[143px] text-center text-white text-base font-medium leading-7 tracking-tight">Contact Sales</div>
             </div>
-
           </div>
-          <div
-            class="lg:w-[365px] h-[733px] p-3 bg-white rounded-[15px] border border-zinc-300 flex flex-col items-center">
+
+          <div class="lg:w-[365px] w-[68%] h-[733px] lg:p-3 bg-white rounded-[15px] border border-zinc-300 flex flex-col items-center justify-between px-5">
             <div class="w-full h-max flex items-start flex-col justify-between mt-4 gap-3">
               <div class="flex items-center justify-start w-full gap-3">
                 <img class="bg-white bg-opacity-5 p-2 rounded-[100px]" src="./images/queue_pro.svg" alt="">
-                <div class="w-[142px] h-7 text-2xl font-medium leading-[30px] tracking-wide">Queue Pro
+                <div class="w-[142px] h-7 md:text-2xl text-xl font-medium leading-[30px] tracking-wide">Queue Pro
                 </div>
               </div>
-              <div class="text-center  mt-3 text-opacity-80 text-base font-light leading-normal">Starting from</div>
-              <div class="w-[276px] h-[62px]"><span class=" text-5xl font-medium  leading-[57.60px]">KD 250</span><span
-                  class=" text-opacity-80 text-xl font-light  leading-relaxed">/per year</span></div>
-              <div class="w-[317px] h-[0px] border border-zinc-300 mt-[10px]"></div>
+              <div class="text-center md:mt-3 text-opacity-80 md:text-base text-sm font-light leading-normal">Starting from</div>
+              <div class="md:w-[276px]md: h-[62px] flex items-center">
+                <span class="md:text-5xl text-4xl font-medium leading-[57.60px]">KD 250</span>
+                <span class="text-opacity-80 md:text-xl text-sm font-light leading-relaxed mt-3 md:m-0">/per year</span></div>
+              <div class="h-[0px] border border-zinc-300 mt-[10px] w-full"></div>
               <div class="w-[155px]  text-base font-light leading-tight">Same startet plan +</div>
               <div class="self-stretch flex justify-start items-start gap-4 inline-flex">
                 <img src="./images/Check_green.svg" alt="">
@@ -837,8 +1102,7 @@
                 <div class=" text-base font-light leading-normal">Extra User – 5 KD</div>
               </div>
             </div>
-            <div
-              class="w-[317px] h-12 px-7 py-4 mt-auto bg-white rounded-[100px] border border-gray-300 justify-center items-center gap-2 inline-flex">
+            <div class="lg:w-[317px] w-full mb-3 h-12 px-7 py-4 mt-auto bg-white rounded-[100px] border border-gray-300 justify-center items-center gap-2 inline-flex">
               <div class="w-[143px] text-center  text-base font-medium leading-7 tracking-tight">Contact
                 Sales</div>
             </div>
@@ -860,14 +1124,13 @@
           <div class="text-white text-base font-medium leading-[18px]">Testimonial</div>
         </div>
 
-        <div id="indicators-carousel" class="relative w-full h-full my-[32px] " data-carousel="slide">
+        <div id="indicators-carousel" class="relative w-full h-full my-[32px] " data-carousel="static">
           <!-- Carousel wrapper -->
-          <div class="relative lg:h-[25rem] h-[30rem] overflow-hidden rounded-lg md:h-[32rem] w-full">
+          <div class="relative h-[30rem] overflow-hidden rounded-lg w-full">
             <!-- Item 1 -->
             <div class="duration-700 ease-in-out flex items-center justify-center flex-col gap-3 mb-3 w-full"
               data-carousel-item="active">
-              <div
-                class="lg:w-[814px] desc text-center lg:text-3xl text-lg font-medium lg:leading-[44px] leading-[25px] mt-[39px]">
+              <div class="lg:w-[814px] desc text-center lg:text-3xl text-lg font-medium lg:leading-[44px] leading-[25px] mt-[39px]">
                 Queue dashboard is
                 something I recommend to every other restaurant owner. I am also impressed with Queue quality after-sale
                 experience, especially their customer support.</div>
@@ -875,34 +1138,48 @@
                 <img src="./images/Ellipse 1.png" class="w-[88px] block w-full" alt="...">
               </div>
               <div class="text-center text-gray-800 text-lg font-normal leading-loose">Seluman El-Qassem</div>
-              <div class="text-center text-slate-600 text-lg font-light leading-7">CEO & Founder at twins restaurant
-              </div>
+              <div class="text-center text-slate-600 text-lg font-light leading-7">CEO & Founder at twins restaurant</div>
             </div>
             <!-- Item 2 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="hidden duration-700 ease-in-out flex items-center justify-center flex-col gap-3 mb-3 w-full" data-carousel-item>
+              <div class="lg:w-[814px] desc text-center lg:text-3xl text-lg font-medium lg:leading-[44px] leading-[25px] mt-[39px]">
+                Queue dashboard is
+                something I recommend to every other restaurant owner. I am also impressed with Queue quality after-sale
+                experience, especially their customer support.</div>
+              <div class="w-[88px] h-[88px] mt-[60px]">
+                <img src="./images/Ellipse 1.png" class="w-[88px] block w-full" alt="...">
+              </div>
+              <div class="text-center text-gray-800 text-lg font-normal leading-loose">Seluman El-Qassem</div>
+              <div class="text-center text-slate-600 text-lg font-light leading-7">CEO & Founder at twins restaurant</div>
               <!-- <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> -->
             </div>
             <!-- Item 3 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <!-- <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> -->
+            <div class="hidden duration-700 ease-in-out flex items-center justify-center flex-col gap-3 mb-3 w-full" data-carousel-item>
+              <div class="lg:w-[814px] desc text-center lg:text-3xl text-lg font-medium lg:leading-[44px] leading-[25px] mt-[39px]">
+                Queue dashboard is
+                something I recommend to every other restaurant owner. I am also impressed with Queue quality after-sale
+                experience, especially their customer support.</div>
+              <div class="w-[88px] h-[88px] mt-[60px]">
+                <img src="./images/Ellipse 1.png" class="w-[88px] block w-full" alt="...">
+              </div>
+              <div class="text-center text-gray-800 text-lg font-normal leading-loose">Seluman El-Qassem</div>
+              <div class="text-center text-slate-600 text-lg font-light leading-7">CEO & Founder at twins restaurant</div>
+              <!-- <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> -->
             </div>
           </div>
           <!-- Slider indicators -->
-          <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse -bottom-11 left-1/2">
-            <button type="button" class="w-3 h-3 rounded-full dark:!bg-main" aria-current="true" aria-label="Slide 1"
+          <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse -bottom-11 left-1/2 gap-x-8 md:gap-x-5 gap-x-0">
+            <button type="button" class="w-3 h-3 rounded-full aria-current:dark:!bg-main !bg-indicator" aria-current="true" aria-label="Slide 1"
               data-carousel-slide-to="0"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+            <button type="button" class="w-3 h-3 rounded-full aria-current:dark:!bg-main !bg-indicator" aria-current="false" aria-label="Slide 2"
               data-carousel-slide-to="1"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+            <button type="button" class="w-3 h-3 rounded-full aria-current:dark:!bg-main !bg-indicator" aria-current="false" aria-label="Slide 3"
               data-carousel-slide-to="2"></button>
           </div>
-          
-         
-          <!-- Slider controls -->
-          <div class="flex justify-between lg:flex-row-reverse flex-row absolute -bottom-[112px] sm:start-[59%] start-[65%] md:start-[57%] lg:hidden">
 
-            <button type="button" disabled
-              class=" disabled:opacity-75 absolute lg:top-0  bottom-0 lg:start-0 end-12 z-30 flex items-center justify-center lg:h-full px-4 cursor-pointer group focus:outline-none"
+
+          <!-- Slider controls -->
+            <button type="button" disabled class="absolute disabled:opacity-75 lg:top-0 lg:start-0 z-30 flex items-center justify-center lg:h-full cursor-pointer group focus:outline-none left-[30%] -bottom-[3%]"
               data-carousel-prev>
               <span
                 class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
@@ -911,120 +1188,101 @@
               </span>
             </button>
 
-            <button type="button"
-              class="absolute lg:top-0 bottom-0 end-0 z-30 flex items-center justify-center lg:h-full px-4 cursor-pointer group focus:outline-none"
-              data-carousel-next>
-              <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-main  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
+            <button type="button" class="absolute lg:top-0 lg:end-0 z-30 flex items-center justify-center lg:h-full cursor-pointer group focus:outline-none right-[32%] -bottom-[3%] lg:right-0" data-carousel-next>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-main  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
                 <img src="./images/arrow_active.svg" class="text-white" alt="">
                 <span class="sr-only">Next</span>
               </span>
             </button>
-          </div>
+
         </div>
       </div>
     </div>
     <!-- testimonial End -->
-    <div class="w-full flex items-center justify-center mt-6">
-
-      <img src="./images/devider.svg" class="mt-[80px]" alt="">
+    <div class="flex items-center justify-center mt-6 mx-auto">
+      <div class="h-[0px] border border-zinc-300 mt-[10px] lg:w-[1135px] w-[80%]"></div>
     </div>
     <!-- cases study Start -->
-    <div class="lg:w-[1135px] mx-auto pt-5 mb-5">
-      <div class="lg:w-full flex-col justify-center items-center gap-[60px] flex">
+    <div class="container sm:w-full mx-auto pt-5 mb-5">
+      <div class="lg:container flex-col justify-center items-center gap-[60px] flex flex-wrap mx-auto">
 
-        <div class="flex justify-between items-end gap-5 w-full">
-          <div
-            class="lg:w-[769px] w-full lg:h-[94px] flex lg:items-start items-center  lg:justify-between justify-center col flex-row flex-wrap px-3 gap-3 lg:px-0">
-            <div class="lg:w-[601px] lg:h-12 text-gray-800 text-4xl font-semibold text-center leading-[60px]">Partners
+        <div class="xl:w-[1135px] flex justify-between items-center flex-wrap xl:gap-5 mx-auto">
+          <div class="w-full md:w-fit flex lg:items-start items-center  lg:justify-between justify-center flex-col flex-wrap px-3 gap-3 lg:px-0">
+            <div class="xl:w-[601px] lg:h-12 text-gray-800 text-4xl font-semibold md:text-start text-center leading-[60px]">
+              Partners
               cases study</div>
-            <div class="lg:w-[769px] text-slate-600 text-xl font-light lg:leading-[30px] text-center lg:text-start">Get
+            <div class="xl:w-[769px] text-slate-600 text-xl font-light lg:leading-[30px] text-center lg:text-start">Get
               to know our customers'
               success
               stories and their experience with Queue.</div>
           </div>
-          <button
-            class="w-[183px] h-14bg-white py-3 rounded-[100px] border border-gray-300 justify-center items-center lg:flex hidden">
+          <a href="#" class="w-[183px] h-14 bg-white py-3 rounded-[100px] border border-gray-300 justify-center items-center lg:flex hidden">
             View More Cases
-          </button>
+          </a>
         </div>
 
-        <div class="flex items-center justify-around flex-col lg:flex-row gap3 w-full flex-wrap">
+        <div class="xl:w-[1135px] flex items-center justify-between flex-col flex-wrap lg:flex-row lg:gap-x-3 gap-2">
 
-          <div class="w-[358px] h-[452px] flex-col justify-center items-start gap-4 inline-flex">
-            <div
-              class="w-[358px] h-60 bg-gradient-to-b from-black card-1 via-black to-black rounded-md flex-col justify-start items-start flex">
+          <div class=" lg:w-[calc(358px - 2rem)] w-3/4 md:max-w-[30rem] xl:max-w-[23rem] lg:mx-0 flex flex-col justify-center items-start gap-y-4">
+            <div class="w-full">
+              <img class="w-full" src="./images/post1.png" alt="">
             </div>
-            <div class="self-stretch h-[196px] flex-col justify-start items-start gap-4 inline-flex">
-              <div class="self-stretch h-[156px] flex-col justify-start items-start gap-3 flex">
-                <div class="self-stretch text-slate-400 text-sm font-normal  leading-tight">Mohaned Tark • 20 Jan 2023
+        
+            <div class="flex-col justify-start items-start lg:gap-4 lg:w-full">
+              <div class="w-full flex-col justify-start items-start items-center gap-3 flex">
+                <div class="self-stretch text-textLightGray text-sm font-normal leading-tight">Mohaned Tark • 20 Jan 2023</div>
+                <div class="lg:w-full text-textDark text-[23px] font-semibold lg:leading-normal leading-[30px]">McDonald's and the story of increasing profits through ...</div>
+                <div class="lg:w-full text-textLight text-[15px] font-light leading-normal">Ahmed Khalifa Tells the importance of electronic marketing in the management...</div>
+                <div class="self-stretch justify-start items-start gap-2 inline-flex">
+                  <div class="px-2.5 py-0.5 bg-bgGray rounded-2xl justify-center items-center flex">
+                    <div class="text-center text-textSemiDark text-sm font-normal leading-tight">Restaurant Marketing</div>
+                  </div>
                 </div>
-                <div
-                  class="w-[358px] text-gray-800 text-2xl font-semibold text-ellipsis whitespace-no overflow-hidden wrap leading-normal">
-                  McDonald's and the story of increasing profits through ...</div>
-                <div class="w-[358px] text-slate-700 text-base font-light leading-normal">Ahmed Khalifa Tells the
+              </div>
+            </div>
+          </div>
+          <div class=" lg:w-[calc(358px - 2rem)] w-3/4 md:max-w-[30rem] xl:max-w-[23rem] lg:mx-0 flex flex-col justify-center items-start gap-y-4">
+            <div class="w-full">
+              <img class="w-full" src="./images/post2.png" alt="">
+            </div>
+        
+            <div class="flex-col justify-start items-start lg:gap-4 lg:w-full">
+              <div class="w-full flex-col justify-start items-start items-center gap-3 flex">
+                <div class="self-stretch text-textLightGray text-sm font-normal leading-tight">Mohaned Tark • 20 Jan 2023</div>
+                <div class="lg:w-full text-textDark text-[23px] font-semibold lg:leading-normal leading-[30px]">In five guys we found queue is easy to manage our bus...</div>
+                <div class="lg:w-full text-textLight text-[15px] font-light leading-normal">Five guys owners Tell the
                   importance of electronic marketing in the management...</div>
-              </div>
-              <div class="self-stretch justify-start items-start gap-2 inline-flex">
-                <div class="mix-blend-multiply justify-start items-start flex">
-                  <div class="px-2.5 py-0.5 bg-zinc-100 rounded-2xl justify-center items-center flex">
-                    <div class="text-center text-slate-600 text-sm font-normal  leading-tight">Restaurant Marketing
-                    </div>
+                <div class="self-stretch justify-start items-start gap-2 inline-flex">
+                  <div class="px-2.5 py-0.5 bg-bgGray rounded-2xl justify-center items-center flex">
+                    <div class="text-center text-textSemiDark text-sm font-normal leading-tight">Restaurant Marketing</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="w-[358px] h-[452px] flex-col justify-center items-start gap-4 inline-flex">
-            <div
-              class="w-[358px] h-60 bg-gradient-to-b card-2 from-black via-black to-black rounded-md flex-col justify-start items-start flex">
+          <div class=" lg:w-[calc(358px - 2rem)] w-3/4 md:max-w-[30rem] xl:max-w-[23rem] lg:mx-0 flex flex-col justify-center items-start gap-y-4">
+            <div class="w-full">
+              <img class="w-full" src="./images/post3.png" alt="">
             </div>
-            <div class="self-stretch h-[196px] flex-col justify-start items-start gap-4 inline-flex">
-              <div class="self-stretch h-[156px] flex-col justify-start items-start gap-3 flex">
-                <div class="self-stretch text-slate-400 text-sm font-normal  leading-tight">Mohaned Tark • 20 Jan 2023
-                </div>
-                <div
-                  class="w-[358px] text-gray-800 text-2xl font-semibold text-ellipsis whitespace-no overflow-hidden wrap leading-normal">
-                  In five guys we found queue is easy to manage our bus...</div>
-                <div class="w-[358px] text-slate-700 text-base font-light leading-normal">Five guys owners Tell the
-                  importance of electronic marketing in the management...</div>
-              </div>
-              <div class="self-stretch justify-start items-start gap-2 inline-flex">
-                <div class="mix-blend-multiply justify-start items-start flex">
-                  <div class="px-2.5 py-0.5 bg-zinc-100 rounded-2xl justify-center items-center flex">
-                    <div class="text-center text-slate-600 text-sm font-normal  leading-tight">Restaurant Marketing
-                    </div>
+        
+            <div class="flex-col justify-start items-start lg:gap-4 lg:w-full">
+              <div class="w-full flex-col justify-start items-start items-center gap-3 flex">
+                <div class="self-stretch text-textLightGray text-sm font-normal leading-tight">Mohaned Tark • 20 Jan 2023</div>
+                <div class="lg:w-full text-textDark text-[23px] font-semibold lg:leading-normal leading-[30px]">New ways to manage KFC restaurants</div>
+                <div class="lg:w-full text-textLight text-[15px] font-light leading-normal">Moayed Tells the
+                  importance of electronic marketing in the management restaurant ...</div>
+                <div class="self-stretch justify-start items-start gap-2 inline-flex">
+                  <div class="px-2.5 py-0.5 bg-bgGray rounded-2xl justify-center items-center flex">
+                    <div class="text-center text-textSemiDark text-sm font-normal leading-tight">Restaurant Marketing</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="w-[358px] h-[452px] flex-col justify-center items-start gap-4 inline-flex">
-            <div
-              class="w-[358px] h-60 bg-gradient-to-b card-3 from-black via-black to-black rounded-md flex-col justify-start items-start flex">
-            </div>
-            <div class="self-stretch h-[196px] flex-col justify-start items-start gap-4 inline-flex">
-              <div class="self-stretch h-[156px] flex-col justify-start items-start gap-3 flex">
-                <div class="self-stretch text-slate-400 text-sm font-normal  leading-tight">Mohaned Tark • 20 Jan 2023
-                </div>
-                <div
-                  class="w-[358px] text-gray-800 text-2xl font-semibold text-ellipsis whitespace-no overflow-hidden wrap leading-normal">
-                  Moayed Tells the importance of electronic marketing in the management restaurant ...</div>
-                <div class="w-[358px] text-slate-700 text-base font-light leading-normal">Moayed Tells the importance of
-                  electronic marketing in the management restaurant ...</div>
-              </div>
-              <div class="self-stretch justify-start items-start gap-2 inline-flex">
-                <div class="mix-blend-multiply justify-start items-start flex">
-                  <div class="px-2.5 py-0.5 bg-zinc-100 rounded-2xl justify-center items-center flex">
-                    <div class="text-center text-slate-600 text-sm font-normal  leading-tight">Restaurant Marketing
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+              
         </div>
+
+
         <button
           class="w-[183px] h-14bg-white py-3 rounded-[100px] border border-gray-300 justify-center items-center flex lg:hidden">
           View More Cases
@@ -1036,7 +1294,7 @@
 
     <!-- faq Start -->
     <div class="w-full h-full mt-[100px]">
-      <div class="faq bg-emerald-50">
+      <div class="faq bg-rgbaBg">
         <div class="flex-col justify-center items-center gap-[45px] flex mx-auto pt-[100px]">
           <div class="h-48 flex-col justify-center items-center gap-6 flex">
             <div class="w-[98px] h-8 px-5 py-1.5 bg-green-400 rounded-[100px] justify-center items-center gap-1 flex">
@@ -1062,12 +1320,12 @@
               <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
                 <span class="text-sm font-medium leading-[21px] lg:text-lg lg:font-medium leading-[27px]"> Is Queue an
                   app ?</span>
-                <span class="transition group-open:rotate-180">
-                  <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                    <path d="M6 9l6 6 6-6"></path>
-                  </svg>
-                </span>
+                  <span class="transition group-open:hidden inline-block w-[22px]">
+                    <img src="/images/plus-ac.svg" alt="">
+                  </span>
+                  <span class="transition group-open:inline-block hidden w-[22px]">
+                    <img src="/images/minus.svg" alt="">
+                  </span>
               </summary>
               <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
                 This platform is a highly reliable and feature-rich service that offers a wide range
@@ -1077,17 +1335,16 @@
               </p>
             </details>
 
-            <details
-              class="group lg:w-full w-[98%] md:w-[90%] lg:px-6 px-2 lg:py-5 py-3 lg:py-5 py-3 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
+            <details class="group lg:w-full w-[98%] md:w-[90%] lg:px-6 px-2 lg:py-5 py-3 lg:py-5 py-3 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
               <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
                 <span class="text-sm font-medium leading-[21px] lg:text-lg lg:font-medium leading-[27px]" lg:text-lg
                   font-medium> Which countries is Queue available in ?</span>
-                <span class="transition group-open:rotate-180">
-                  <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                    <path d="M6 9l6 6 6-6"></path>
-                  </svg>
-                </span>
+                 <span class="transition group-open:hidden inline-block w-[22px]">
+                    <img src="/images/plus-ac.svg" alt="">
+                  </span>
+                  <span class="transition group-open:inline-block hidden w-[22px]">
+                    <img src="/images/minus.svg" alt="">
+                  </span>
               </summary>
               <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
                 This platform is a highly reliable and feature-rich service that offers a wide range
@@ -1097,17 +1354,16 @@
               </p>
             </details>
 
-            <details
-              class="group lg:w-full w-[98%] md:w-[90%] lg:px-6 px-2 lg:py-5 py-3  lg:py-5 py-3 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
+            <details class="group lg:w-full w-[98%] md:w-[90%] lg:px-6 px-2 lg:py-5 py-3  lg:py-5 py-3 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
               <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
                 <span class="text-sm font-medium leading-[21px] lg:text-lg lg:font-medium leading-[27px]" lg:text-lg
                   font-medium> Is Queue suitable for small businesses ?</span>
-                <span class="transition group-open:rotate-180">
-                  <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                    <path d="M6 9l6 6 6-6"></path>
-                  </svg>
-                </span>
+                 <span class="transition group-open:hidden inline-block w-[22px]">
+                    <img src="/images/plus-ac.svg" alt="">
+                  </span>
+                  <span class="transition group-open:inline-block hidden w-[22px]">
+                    <img src="/images/minus.svg" alt="">
+                  </span>
               </summary>
               <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
                 This platform is a highly reliable and feature-rich service that offers a wide range
@@ -1117,17 +1373,16 @@
               </p>
             </details>
 
-            <details
-              class="group lg:w-full w-[98%] md:w-[90%] lg:px-6 px-2 lg:py-5 py-3  lg:py-5 py-3 bg-white rounded-lg border border-gray-800 lg:justify-center justify-between items-center inline-flex">
+            <details class="group lg:w-full w-[98%] md:w-[90%] lg:px-6 px-2 lg:py-5 py-3  lg:py-5 py-3 bg-white rounded-lg border border-gray-800 lg:justify-center justify-between items-center inline-flex">
               <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
                 <span class="text-sm font-medium leading-[21px] lg:text-lg lg:font-medium leading-[27px]" lg:text-lg
                   font-medium> How long do you provide support ?</span>
-                <span class="transition group-open:rotate-180">
-                  <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                    <path d="M6 9l6 6 6-6"></path>
-                  </svg>
-                </span>
+                 <span class="transition group-open:hidden inline-block w-[22px]">
+                    <img src="/images/plus-ac.svg" alt="">
+                  </span>
+                  <span class="transition group-open:inline-block hidden w-[22px]">
+                    <img src="/images/minus.svg" alt="">
+                  </span>
               </summary>
               <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
                 This platform is a highly reliable and feature-rich service that offers a wide range
@@ -1136,17 +1391,16 @@
                 suit different needs and budgets.
               </p>
             </details>
-            <details
-              class="group lg:w-full w-[98%] md:w-[90%] lg:px-6 px-2 lg:py-5 py-3  lg:py-5 py-3 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
+            <details class="group lg:w-full w-[98%] md:w-[90%] lg:px-6 px-2 lg:py-5 py-3  lg:py-5 py-3 bg-white rounded-lg border border-gray-800 justify-center items-center inline-flex">
               <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
                 <span class="text-sm font-medium leading-[21px] lg:text-lg lg:font-medium leading-[27px]" lg:text-lg
                   font-medium> Can I try it before I subscribe and pay ?</span>
-                <span class="transition group-open:rotate-180">
-                  <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                    <path d="M6 9l6 6 6-6"></path>
-                  </svg>
-                </span>
+                 <span class="transition group-open:hidden inline-block w-[22px]">
+                    <img src="/images/plus-ac.svg" alt="">
+                  </span>
+                  <span class="transition group-open:inline-block hidden w-[22px]">
+                    <img src="/images/minus.svg" alt="">
+                  </span>
               </summary>
               <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
                 This platform is a highly reliable and feature-rich service that offers a wide range
@@ -1157,10 +1411,9 @@
             </details>
 
           </div>
-          <button
-            class="w-[210px] h-[67px] px-[23px] py-5 bg-white rounded-[100px] border border-gray-300 justify-center items-center gap-2 flex mb-[100px]">
+          <a class="w-[210px] h-[67px] px-[23px] py-5 bg-white rounded-[100px] border border-gray-300 justify-center items-center gap-2 flex mb-[100px]"  href="#">
             <div class="text-gray-800 text-lg font-medium  leading-[27px]">View More FAQ</div>
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -1170,18 +1423,16 @@
     <div class="w-full mt-[106px]">
       <div class="container mx-auto flex flex-col items-center ">
         <div class="flex flex-col items-center justify-between gap-5 ready py-5">
-          <div class="lg:w-[529px] lh:h-[53px] text-center text-gray-800 text-5xl font-bold leading-[44px]">Ready to get
+          <div class="lg:w-[529px] lh:h-[53px] text-center text-gray-800 text-5xl font-bold lg:leading-[44px] leading-[54px]">Ready to get
             started</div>
           <div class="lg:w-[503px] text-center text-slate-600 text-lg font-light  leading-[30px]"> Let's come together
             and
             showcase how we can attain growth your business.</div>
-          <div class="w-full md:w-[313px] h-11 flex items-center justify-center gap-3 lg:mt-3">
-            <button
-              class="w-[148px] h-11 px-5 py-2 bg-green-400 rounded-[100px] justify-center items-center gap-2 inline-flex">
+          <div class="w-full md:w-[313px] lg:h-11 flex items-center justify-center md:flex-row flex-col gap-3 lg:mt-3">
+            <button class="md:w-fit w-[90%] lg:h-11 px-5 py-2 border-0 bg-main text-white rounded-[100px]">
               Book a Demo
             </button>
-            <button
-              class="w-[149px] h-11 bg-white rounded-[100px] border border-gray-300 justify-center items-center gap-2 inline-flex">
+            <button class="md:w-fit w-[90%] lg:h-11 px-5 py-2 bg-white rounded-[100px] border border-gray-300 gap-2">
               Contact Sales
             </button>
           </div>
@@ -1195,28 +1446,27 @@
 
 
     <!-- footer Start -->
-    <div class="w-full bg-[#343E55] relative py-14 flex items-center justify-around lg:flex-col flex-row flex-wrap">
-      <div class="z-30 my-5">
+    <div class="w-full bg-[#343E55] relative py-14 flex items-center justify-around flex-col flex-wrap">
+      <div class="z-30 lg:my-5 my-8 flex lg:flex-row flex-col w-3/4 justify-around items-center gap-y-5 w-full">
         <div class="lg:w-[544.28px] text-white lg:text-start text-center text-4xl font-medium lg:leading-[47px]">
           Subscribe to our newsletter to stay in touch.
         </div>
-        <div class="flex items-center flex-col justify-between">
-          <div class="h-[60px] lg:text-start text-center text-white text-xl font-light leading-[30px] tracking-tight">
-            Sign up to receive updates and feature releases to your email.<br /></div>
+        <div class="flex items-start flex-col justify-between gap-y-4 items-center">
+          <div class="lg:h-[60px] lg:text-start text-center text-white text-xl font-light leading-[30px] tracking-tight">
+            Sign up to receive updates and feature <br> releases to your email.<br /></div>
 
-          <div
-            class="md:w-[456px] h-14 pl-6 pr-2 py-2 bg-zinc-100 bg-opacity-10 rounded-[100px] lg:justify-center justify-between items-center gap-[94px] inline-flex flex-wrap">
-            <div class="lg:w-[204px] text-white text-base font-light leading-normal">Enter your email</div>
-            <div
-              class="lg:w-[126px] px-[23px] py-2 bg-green-400 rounded-[100px] shadow justify-center items-center gap-2 flex">
-              <div class="text-green-50 text-base font-medium leading-normal">Subscribe</div>
-            </div>
-          </div>
+          <form class="md:w-[456px] w-[90%] h-14 md:pl-6 md:pr-2 lg:px-3 py-2 bg-zinc-100 bg-opacity-10 rounded-[100px] justify-around items-center md:gap-[94px] flex">
+            <input type="email" class="lg:w-[204px] placeholder:text-white text-base font-light leading-normal bg-transparent border-0 p-0" placeholder="Enter your email">
+            <button type="submit" class="lg:w-[126px] lg:px-[23px] px-3 py-2 bg-green-400 rounded-[100px] text-white text-base font-medium leading-normal">
+              Subscribe
+            </button>
+          </form>
         </div>
       </div>
-      <div class="w-full lg:h-[221px] px-[151px] py-[45px] flex-col justify-start items-start gap-[45px] inline-flex">
-        <div class="self-stretch justify-center items-center gap-8 inline-flex lg:flex-row flex-col">
-          <div class="grow shrink basis-0 flex-col justify-start items-start gap-6 inline-flex">
+      <div class="lg:block h-px w-full bg-border hidden my-[30px]"></div>
+      <div class="w-3/4 my-[45px] flex-col justify-around items-start flex">
+        <div class="self-stretch justify-around items-center gap-8 inline-flex lg:flex-row flex-col">
+          <div class="justify-center items-center flex">
             <img class="w-[106px] h-8 relative" src="./images/logo.png" />
           </div>
           <div class="justify-center items-center gap-8 flex lg:flex-row flex-col  flex-wrap text-center">
@@ -1226,7 +1476,7 @@
             <div class="text-white text-base font-normal leading-normal">FAQ’s</div>
             <div class="text-white text-base font-normal leading-normal">Contact us</div>
           </div>
-          <div class="grow shrink basis-0 h-6 justify-end items-center gap-3 flex flex-row">
+          <div class="h-6 justify-center items-end gap-3 flex flex-row">
             <div class="w-6 h-6 relative">
               <img src="./images/Facebook.svg" alt="">
             </div>
@@ -1242,8 +1492,8 @@
           </div>
         </div>
       </div>
-      <div class="lg:h-[54px] lg:justify-start justify-between items-center gap-8 flex flex-wrap lg:flex-col flex-row">
-        <div class="self-stretch h-px bg-gray-50 bg-opacity-10"></div>
+      <div class="lg:container block w-3/4 mb-[32px] h-px bg-border"></div>
+      <div class="lg:justify-start justify-between items-center gap-8 flex flex-col lg:flex-row">
         <div
           class="w-full lg::justify-center justify-between lg:items-start items-center gap-6 flex lg:flex-row flex-col">
           <div class="text-white text-sm font-normal leading-[21px]">© 2023 Queue. All right reserved</div>
@@ -1258,6 +1508,42 @@
     <!-- footer End -->
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+  <script>
+    // Select all list items within the unordered list
+    const listItems = document.querySelectorAll('#default-styled-tab li');
+
+    // Function to apply background color based on aria-selected attribute
+    function applyBackgroundColor() {
+        listItems.forEach(function(listItem) {
+            const button = listItem.querySelector('button');
+            const isSelected = button.getAttribute('aria-selected') === 'true';
+            listItem.classList.toggle('bg-white', isSelected);
+        });
+    }
+
+    // Apply background color when the page loads
+    applyBackgroundColor();
+
+    // Create a MutationObserver to watch for changes in the aria-selected attribute
+    const observer = new MutationObserver(function(mutationsList) {
+        for (let mutation of mutationsList) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'aria-selected') {
+                applyBackgroundColor();
+                break;
+            }
+        }
+    });
+
+    // Observe changes to aria-selected attribute of buttons
+    listItems.forEach(function(listItem) {
+        const button = listItem.querySelector('button');
+        observer.observe(button, { attributes: true });
+    });
+</script>
+
+
+
 </body>
 
 </html>

@@ -5,15 +5,16 @@ body {
     position: relative;
 }
 
+/* services Start */
+
+/* services End */
 /* fields Start */
-@media (width >= 1200px) {
-    
-    span.fields {
-        position: relative;
-        display: flex;
-    }
-    
-    
+span.fields {
+    position: relative;
+    display: flex;
+}
+
+@media (width >= 1200px) { 
     span.fields::before {
         position: absolute;
         content: url('./images/star.svg');
@@ -24,8 +25,24 @@ body {
     .fields::after {
         position: absolute;
         content: url('./images/vector.svg');
-        top: -27px;
-        right: 7px;
+        top: -30px;
+        right: -19px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    span.fields::before {
+        position: absolute;
+        content: url('./images/star.svg');
+        top: -65px;
+        left: 45px;
+    }
+    
+    .fields::after {
+        position: absolute;
+        content: url('./images/vector.svg');
+        top: -40px;
+        right: 65px;
     }
 }
 
@@ -61,15 +78,15 @@ body {
     .desc::before {
         content: url('./images/up.svg');
         position: absolute;
-        top: 14px;
-        left: 90px;
+        top: 3% !important;
+        left: 19% !important;
     }
     
     .desc::after {
         content: url('./images/down.svg');
         position: absolute;
-        bottom: 240px;
-        right: 90px;
+        bottom: 50% !important;
+        right: 18% !important;
     }
 }
 
@@ -89,17 +106,6 @@ body {
 /*  testimonial End  */
 
 /*  cases study Start  */
-.card-1 {
-    background-image: url('./images/post1.png') !important;
-}
-
-.card-2 {
-    background-image: url('./images/post2.png') !important;
-}
-
-.card-3 {
-    background-image: url('./images/post3.png') !important;
-}
 
 /*  cases study End  */
 
@@ -139,13 +145,13 @@ body {
         left: -70px;
     }
     
-    .ipad {
-        position: relative;
-        height: 600px;
-    }
 }
 
 @media (width >= 1200px){
+    .ipad {
+        position: relative;
+        margin-top: 100px;
+    }
     .ipad::before {
         position: absolute;
         content: url('./images/vector.svg');
@@ -159,13 +165,19 @@ body {
         content: url('./images/star-y.svg');
         bottom: 249px;
         right: -45px;
-    
+        
     }
 }
-
-.ipad img{
-    position: relative;
-    bottom: -342px;
-    left: 0;
+@media (width:320px) and (max-width:768px) {
+    
+    .ipad {
+        position: relative;
+        height: auto;
+    }
+    .ipad img{
+        position: relative;
+        bottom: -66px;
+        left: 0;
+    }
 }
 /*  ready End  */
